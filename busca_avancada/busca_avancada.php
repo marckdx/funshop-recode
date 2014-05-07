@@ -629,7 +629,7 @@
                                                                                     <td class="subitem_menu_categorias_vertical">&nbsp;&nbsp;<a href="http://www.funshopnet.com.br/pc-web-cam-m208_220"><font color="#637089">Web Cam</font></a></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="item_menu_categorias_vertical css_custom_bpelucias/b" style="border-bottom:1px solid #f2f8fc" background="./busca_avancada_files/box_categoria_vermelho.png"><a href="http://www.funshopnet.com.br/pelucias-m280"><font color="#f9fafc"><b>Pelúcias</b></font></a></td>
+                                                                                    <td class="item_menu_categorias_vertical css_custom_bpelucias" style="border-bottom:1px solid #f2f8fc" background="./busca_avancada_files/box_categoria_vermelho.png"><a href="http://www.funshopnet.com.br/pelucias-m280"><font color="#f9fafc"><b>Pelúcias</b></font></a></td>
                                                                                 </tr>
                                                                                 <tr>
                                                                                     <td class="subitem_menu_categorias_vertical">&nbsp;&nbsp;<a href="http://www.funshopnet.com.br/pelucias-pelucias-disney-m280_282"><font color="#637089">Pelúcias Disney</font></a></td>
@@ -659,7 +659,7 @@
                                                                                     <td class="subitem_menu_categorias_vertical">&nbsp;&nbsp;<a href="http://www.funshopnet.com.br/ps-vita-jogos-usados-m273_289"><font color="#637089">Jogos Usados</font></a></td>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td class="item_menu_categorias_vertical css_custom_bps2/b" style="border-bottom:1px solid #f2f8fc" background="./busca_avancada_files/box_categoria_vermelho.png"><a href="http://www.funshopnet.com.br/ps2-m221"><font color="#f9fafc"><b>PS2</b></font></a></td>
+                                                                                    <td class="item_menu_categorias_vertical css_custom_bps2" style="border-bottom:1px solid #f2f8fc" background="./busca_avancada_files/box_categoria_vermelho.png"><a href="http://www.funshopnet.com.br/ps2-m221"><font color="#f9fafc"><b>PS2</b></font></a></td>
                                                                                 </tr>
                                                                                 <tr>
                                                                                     <td class="subitem_menu_categorias_vertical">&nbsp;&nbsp;<a href="http://www.funshopnet.com.br/ps2-acessorios-m221_222"><font color="#637089">Acessórios</font></a></td>
