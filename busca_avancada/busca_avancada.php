@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- saved from url=(0047)http://www.funshopnet.com.br/busca_avancada.php -->
-<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="br" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="br" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
         <meta name="TITLE" content="Fun Shop - A Sua loja de Games, Action figures e Brinquedos.">
         <meta name="SUBJECT" content="Em nossa loja você encontra os ultimos lançamentos em consoles, jogos, acessórios. brinquedos e uma linha completa de action figures.">
