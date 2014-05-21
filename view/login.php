@@ -931,8 +931,8 @@
                                         <table border="0" align="right" cellpadding="0" cellspacing="0">
                                             <tbody><tr>
                                                     <td><a href="https://ecommerce2.iset.com.br/funshopnet.com.br/minhaconta.php?sid=df90b5afc37d884f3be6ee568906c99e"><img src="../img/minhaconta.gif" border="0" alt="" width="80" height="16"></a></td>        <td width="5">&nbsp;</td>
-                                                    <td><a href="http://localhost/carrinho.php"><img src="../img/minhascompras.gif" border="0" alt="" width="97" height="16"></a></td>        <td width="5">&nbsp;</td>
-                                                    <td><a href="https://ecommerce2.iset.com.br/funshopnet.com.br/pedido.php?sid=df90b5afc37d884f3be6ee568906c99e"><img src="../img/realizarpedido.gif" border="0" alt="" width="94" height="16"></a></td>
+                                                    <td><a href="http://localhost/site-php-funshop/view/carrinho.php"><img src="../img/minhascompras.gif" border="0" alt="" width="97" height="16"></a></td>        <td width="5">&nbsp;</td>
+                                                    <td><a href="http://localhost/site-php-funshop/view/pedido.php"><img src="../img/realizarpedido.gif" border="0" alt="" width="94" height="16"></a></td>
                                                 </tr>
                                             </tbody></table>
                                     </td>
@@ -1029,7 +1029,7 @@
 
         <div style="width: 100%; text-align: center; float: left;"><font size="1"><font face="Tahoma"><a href="http://localhost/faleconosco.php"><strong><font color="#808080">Clique aqui</font></strong></a> para entrar em contato.<br>
                     <br>
-                    <a href="http://localhost/faleconosco.php"><img alt="" src="../img/sac_50x35.gif" style="width: 50px; height: 35px;"></a></font></font></div>
+                    <a href="http://localhost/site-php-funshop/view/faleconosco.php"><img alt="" src="../img/sac_50x35.gif" style="width: 50px; height: 35px;"></a></font></font></div>
 
         <table border="0" cellpadding="0" cellspacing="0" height="132" id="Table_01" width="100%">
             <tbody>
