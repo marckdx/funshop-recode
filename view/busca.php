@@ -485,7 +485,7 @@ $(document).ready(function(){});
 </tr></tbody></table>
 
 <!-- INICIO menu horizontal de categorias //-->
-<table width="100%" cellpadding="0" cellspacing="0" background=".../img/barra_01.png">
+<table width="100%" cellpadding="0" cellspacing="0" background="../img/barra_01.png">
   <tbody><tr>
     <td>
     	<div id="menu_categoria">
@@ -876,7 +876,7 @@ $(document).ready(function(){});
   <tbody><tr>
 <td><table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="0" style="background: BOX_HEADING_CHAMADAS_COR_FUNDO">
   <tbody><tr>
-    <td align="center"><iframe src="../img/saved_resource.htm" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:160px; height:410px;" allowtransparency="true"></iframe></td>
+          <td align="center"><img src="../img/facebook.png" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:160px; height:410px;" allowtransparency="true"></td>
   </tr>
 </tbody></table>
 </td>
