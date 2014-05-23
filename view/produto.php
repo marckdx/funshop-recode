@@ -15,7 +15,7 @@
 <meta name="author" content="www.iset.com.br">
 <meta name="publisher" content="www.iset.com.br">
 <meta name="copyright" content="www.iset.com.br">
-<meta name="charset" content="ISO-8859-1">
+<meta name="charset" content="UTF-8">
 <meta name="distribution" content="Global">
 <meta name="language" content="portuguese, PT">
 <meta name="expires" content="Tue, 06 May 2014 00:00:00 GMT">
