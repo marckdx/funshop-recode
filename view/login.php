@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+    
+    if(isset($_SESSION["ds_email"])){
+        header("Location: index.php");
+    }
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- saved from url=(0095)https://ecommerce2.iset.com.br/funshopnet.com.br/login.php?sid=df90b5afc37d884f3be6ee568906c99e -->
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="br" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
