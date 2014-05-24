@@ -1958,7 +1958,7 @@ alt="MercadoPago"></span></td>   </tr> </tbody></table> </td>   </tr>
 <li style="width: 24%; height: 374px; overflow: auto;">
 								<div class="item_box_produto">
 									<a href="http://www.funshopnet.com.br/action-figure-super-sonic-super-poser-jazwares-p2358">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1378229343-350x350-super_sonic_super_posers_jazwares_1.JPG" border="0" alt="Action Figure Super Sonic - Super Poser Jazwares" title="Action Figure Super Sonic - Super Poser Jazwares" width="160" height="160"></div>
+										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1378229343-350x350-super_sonic_super_posers_jazwares_1.jpg" border="0" alt="Action Figure Super Sonic - Super Poser Jazwares" title="Action Figure Super Sonic - Super Poser Jazwares" width="160" height="160"></div>
 
 										<b><div class="nome">Action Figure Super Sonic - Super Poser Jazwares</div>
 </b>
