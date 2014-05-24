@@ -12,7 +12,7 @@ if (!isset($_POST["login_email"]) or ! isset($_POST["login_senha"]) or $_POST["l
     $sel = mysql_select_db("bd_funshop");
     $result = @mysql_query("SELECT u.nm_usuario, u.vl_saldo FROM tb_usuario u, tb_login l "
             . "WHERE l.ds_login='$login' AND l.ds_senha='$senha' AND l.cd_usuario=u.cd_usuario") or die(mysql_error());
-    
+     
     if (mysql_num_rows($result) > 0) {
         session_start();
         $valor = mysql_fetch_array($result);

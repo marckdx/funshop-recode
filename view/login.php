@@ -1,5 +1,6 @@
 <?php 
     session_start();
+    require_once '../control/utilidades.class.php';
     
     if(isset($_SESSION["ds_email"])){
         header("Location: index.php");
@@ -933,7 +934,7 @@
             <tbody><tr><td background="../img/bg_tb_header.gif">
                         <table border="0" cellpadding="0" cellspacing="0" width="100%">
                             <tbody><tr>
-                                    <td class="texto11" width="50%" height="26" style="padding:0px;color:#000000;font-size:12px;">&nbsp;Boa tarde, faça o seu <a href="http://localhost/site-php-funshop/view/login.php" style="text-decoration:underline;color:#000000;">login</a> ou clique aqui para se <a href="novaconta.php" style="text-decoration:underline;color:#000000;">cadastrar</a>.</td>
+                                    <td class="texto11" width="50%" height="26" style="padding:0px;color:#000000;font-size:12px;">&nbsp; <?php echo utilidades::getSaudacao();?>, faça o seu <a href="http://localhost/site-php-funshop/view/login.php" style="text-decoration:underline;color:#000000;">login</a> ou clique aqui para se <a href="novaconta.php" style="text-decoration:underline;color:#000000;">cadastrar</a>.</td>
                                     <td width="50%" height="26">
                                         <table border="0" align="right" cellpadding="0" cellspacing="0">
                                             <tbody><tr>
