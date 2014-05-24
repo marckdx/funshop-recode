@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+    
+    if(isset($_SESSION["nm_usuario"])){
+        header("Location: login.php");
+    }
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- saved from url=(0029)http://www.funshopnet.com.br/ -->
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="br" class=""><head><meta http-equiv="Content-Type" content="text/html; charset= UTF-8 ">
@@ -468,8 +475,8 @@ $(document).ready(function(){});
 <table border="0" width="100%" cellspacing="0" cellpadding="0" class="texto11 barra_menu_cabecalho">
 <tbody><tr><td background="../img/bg_tb_header.gif">
   <table border="0" cellpadding="0" cellspacing="0" width="100%">
-  <tbody><tr>
-    <td class="texto11" width="50%" height="26" style="padding:0px;color:#000000;font-size:12px;">&nbsp;Boa tarde, faca o seu <a href="login.php" style="text-decoration:underline;color:#000000;">login</a> ou clique aqui para se <a href="cadastro.php" style="text-decoration:underline;color:#000000;">cadastrar</a>.</td>
+  <tbody><tr>   
+    <td class="texto11" width="50%" height="26" style="padding:0px;color:#000000;font-size:12px;">&nbsp;Boa tarde, <?php $_SESSION["nm_usuario"];?>  clique aqui para se <a href="sair.php" style="text-decoration:underline;color:#000000;">sair</a>.</td>
     <td width="50%" height="26">
 		<table border="0" align="right" cellpadding="0" cellspacing="0">
       <tbody><tr>
