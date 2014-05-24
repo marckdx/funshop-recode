@@ -22,7 +22,7 @@ CREATE TABLE tb_login (
   CONSTRAINT tb_login_ibfk_1 FOREIGN KEY (cd_usuario) REFERENCES tb_usuario (cd_usuario)
 );
 
-INSERT INTO `tb_login` VALUES (1,1,'marco@elit2.com','marco'),(2,2,'jhony@elit2.com','jhony'),(3,3,'augusto@instasoft.com','augusto');
+INSERT INTO tb_login VALUES (1,1,'marco@elit2.com','marco'),(2,2,'jhony@elit2.com','jhony'),(3,3,'augusto@instasoft.com','augusto');
 
 CREATE TABLE tb_produto(
  cd_produto	int,

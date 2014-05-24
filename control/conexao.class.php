@@ -13,28 +13,32 @@
  */
 class conexao {
 
-    private $servidor = "localhost";
-    private $banco = "bd_funshop";
-    private $usuario = "root";
-    private $senha = "root";
+    private $servidor;
+    private $banco;
+    private $usuario;
+    private $senha;
+    private $con;
 
-    public function __construct() {
-        $con = mysql_connect($servidor, $usuario, $senha);
-        return $con;
+    function __construct() {
+        $this->servidor = "localhost";
+        $this->banco = "bd_funshop";
+        $this->usuario = "root";
+        $this->senha = "root";
+        $this->con = mysql_connect($this->servidor, $this->usuario, $this->senha) or die(mysql_error());
+        mysql_select_db($this->banco);        
     }
 
-    public function doSelect($sql) {
-       $result =  mysql_query($query);
-       
+    public static function doSelect($sql) {
+        return mysql_query($sql) or die(mysql_error());
     }
 
     public function doInsert($sql) {
-        
+        mysql_query($sql) or die(mysql_error());
     }
 
     public function closeCon() {
-        if ($con != null) {
-            destroy();
+        if ($this->con != null) {
+            $this->destroy();
         }
     }
 
