@@ -529,7 +529,7 @@ node-15" class="last"><a href="http://www.funshopnet.com.br/xbox-
 one-m310"><span>Xbox One</span></a></li></ul>      </div>         </td>
 </tr> </tbody></table> <!-- FIM menu horizontal de categorias //--> <form
 id="barra_quick_find" name="barra_quick_find" method="POST"
-action="busca_avancada_resultado.php">   <table
+action="busca_avancada.php">   <table
 width="100%" border="0" cellspacing="0" cellpadding="0" style="" height="40"
 background="../img/bg_barra_busca.gif">         <tbody><tr>             <td
 width="99%">             <table width="1" border="0" align="right"
@@ -642,7 +642,7 @@ value="319">&nbsp;•&nbsp;&nbsp;•&nbsp;Skin Controle</option></select></td>
 <td width="1%" style="padding-left:5px;"><input type="image" src="../img/bt_ok.gif" border="0"
 alt="Busca Rápida" title=" Busca Rápida "></td>                     <td
 width="1%" style="padding-left:5px;"><a
-href="busca_avancada.php"><img src="../img/bt_busca_avancada.gif"
+href="busca.php"><img src="../img/bt_busca_avancada.gif"
 border="0" alt="Busca avançada" title="Busca avançada" width="100"
 height="22"></a></td>                 </tr>             </tbody></table>
 </td>         </tr>     </tbody></table>     </form> <table border="0"
@@ -660,13 +660,13 @@ image:url(../img/bg_meio.png);background-
 repeat:repeat-y;color:#000000;">   <tbody><tr> <td><table class="texto11"
 border="0" width="100%" cellspacing="0" cellpadding="0">   <tbody><tr>     <td
 align="center"><form id="quick_find" name="quick_find" method="POST"
-action="busca_avancada_resultado.php"><table
+action="busca.php"><table
 border="0" cellspacing="2" cellpadding="0" class="texto11">   <tbody><tr>
 <td width="80%"><input autocomplete="off" type="text" name="keywords"
 id="keywords" class="campo_texto" maxlength="25" style="width:90%;"></td>
 <td width="20%"><input type="image" src="../img/bt_ok.gif" border="0" alt=""></td>   </tr>
 <tr>     <td colspan="2" align="center"><a
-href="busca_avancada.php"><b>Busca
+href="busca.php"><b>Busca
 Avançada</b></a></td>   </tr>   <tr>     <td colspan="2" align="center"
 style="color:#000000;">Use palavras-chave para achar o que procura.</td>
 </tr> </tbody></table></form></td>   </tr> </tbody></table> </td>   </tr>
@@ -730,7 +730,7 @@ color="#f9fafc"><b>Geek</b></font></a></td>   </tr>   <tr>     <td
 class="subitem_menu_categorias_vertical">&nbsp;&nbsp;<a
 href="http://www.funshopnet.com.br/nome-categoria-m311_318"><font
 color="#637089">Adesivos Decorativos</font></a></td>   </tr>   <tr>     <td
-class="item_menu_categorias_vertical css_custom_bpc/b" style="border-
+class="item_menu_categorias_vertical css_custom_bpc" style="border-
 bottom:1px solid #f2f8fc" background="../img/box_categoria_vermelho.png"><a
 href="http://www.funshopnet.com.br/pc-m208"><font
 color="#f9fafc"><b>PC</b></font></a></td>   </tr>   <tr>     <td
