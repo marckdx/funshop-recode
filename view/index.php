@@ -1160,7 +1160,7 @@ alt="MercadoPago"></span></td>   </tr> </tbody></table> </td>   </tr>
 <li style="width: 24%; height: 374px; overflow: auto;">
 								<div class="item_box_produto">
 									<a href="http://www.funshopnet.com.br/ps3-ratchet-clank-future-tools-of-destruction-p461">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="1301927740-250x292-dead_to_rights_retribution_ps3_1.jpg" border="0" alt="PS3 Ratchet &amp;Clank Future: Tools of Destruction" title="PS3 Ratchet &amp;Clank Future: Tools of Destruction" width="139" height="160"></div>
+										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1302021683-250x289-ratchet_clank_future_ps3_1.jpg" border="0" alt="PS3 Ratchet &amp;Clank Future: Tools of Destruction" title="PS3 Ratchet &amp;Clank Future: Tools of Destruction" width="139" height="160"></div>
 
 										<b><div class="nome">PS3 Ratchet &amp;Clank Future: Tools of Destruction</div>
 </b>
@@ -1204,7 +1204,7 @@ alt="MercadoPago"></span></td>   </tr> </tbody></table> </td>   </tr>
 <li style="width: 24%; height: 374px; overflow: auto;">
 								<div class="item_box_produto">
 									<a href="http://www.funshopnet.com.br/ps3-dead-to-rights-retribution-p386">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="1301927740-250x292-dead_to_rights_retribution_ps3_1.jpg" border="0" alt="PS3 Dead To Rights - Retribution" title="PS3 Dead To Rights - Retribution" width="137" height="160"></div>
+										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1301927740-250x292-dead_to_rights_retribution_ps3_1.jpg" border="0" alt="PS3 Dead To Rights - Retribution" title="PS3 Dead To Rights - Retribution" width="137" height="160"></div>
 
 										<b><div class="nome">PS3 Dead To Rights - Retribution</div>
 </b>
