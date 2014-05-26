@@ -18,6 +18,9 @@ if (!isset($_POST["login_email"]) or ! isset($_POST["login_senha"]) or $_POST["l
         $valor = mysql_fetch_array($result);
         $_SESSION["ds_email"] = $_POST["login_email"];
         $_SESSION["nm_usuario"] = $valor["nm_usuario"];
-        header("Location: ../view/index.php");
+       
     }
+     header("Location: http://localhost/site-php-funshop/view/index.php");
 }
+
+echo "<h1>ACESSO NÃO AUTORIZADO</h1>";

@@ -36,8 +36,7 @@ CREATE TABLE tb_produto(
  primary key(cd_produto)
 );
 
-INSERT INTO tb_produto values(1,'PS3 Ratchet & Clank Future: Tools of Destruction', 'Desde 2002, Ratchet vem promovendo a destruição por onde passa.Ele tem uma aparência de mascote, mas é mestre no uso de armas pesadas.Com essa combinação, se tornou uma das séries mais populares dos consoles da Sony.', 
-								50 , 79.00 , 0.05 , 1 ,'90 dias - Contra defeitos de Fabricação.Não Trocamos CDs, DVDs ou Blu-ray riscados.');
+INSERT INTO tb_produto values(1,'PS3 Ratchet & Clank Future: Tools of Destruction', 'Desde 2002, Ratchet vem promovendo a destruição por onde passa.Ele tem uma aparência de mascote, mas é mestre no uso de armas pesadas.Com essa combinação, se tornou uma das séries mais populares dos consoles da Sony.', 50 , 79.00 , 0.05 , 1 ,'90 dias - Contra defeitos de Fabricação.Não Trocamos CDs, DVDs ou Blu-ray riscados.');
 
 INSERT INTO tb_produto values(2,'PS3 Dead To Rights - Retribution', 'Afastado dos videogames desde 2005, o policial linha dura Jack Slate volta da aposentadoria e traz, claro, seu velho parceiro canino Shadow de volta. É o reinício da franquia "Dead to Rights", que começou como uma mera imitação de "Max Payne" e acabou rendendo continuações e até mesmo aventuras paralelas para diversas plataformas.',
 							  40 , 99.00 , 0.05, 1, '90 dias - Contra defeitos de Fabricação. Não Trocamos CDs, DVDs ou Blu-ray riscados.');
