@@ -1157,105 +1157,7 @@ alt="MercadoPago"></span></td>   </tr> </tbody></table> </td>   </tr>
                                                                              name="keywords" id="keywords" class="campo_texto" size="25"
                                                                              maxlength="30"></td>                     <td style="padding-left:5px;"><select
                                                 name="categories_id" id="categories_id"><option value="" selected="">Todas as
-                                                    categorias</option><option value="241">3DS e DS</option><option
-                                                    value="242">&nbsp;•&nbsp;&nbsp;•&nbsp;Acessórios</option><option
-                                                    value="243">&nbsp;•&nbsp;&nbsp;•&nbsp;Consoles</option><option
-                                                    value="244">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos</option><option
-                                                    value="255">&nbsp;•&nbsp;&nbsp;•&nbsp;Promoções</option><option
-                                                    value="322">&nbsp;•&nbsp;&nbsp;•&nbsp;Skin</option><option value="180">Action
-                                                    Figures</option><option value="253">&nbsp;•&nbsp;&nbsp;•&nbsp;Action figures
-                                                    Anime &amp; HQ</option><option value="252">&nbsp;•&nbsp;&nbsp;•&nbsp;Action
-                                                    Figures Filmes &amp; TV</option><option
-                                                    value="182">&nbsp;•&nbsp;&nbsp;•&nbsp;Action Figures Games</option><option
-                                                    value="303">&nbsp;•&nbsp;&nbsp;•&nbsp;Action Figures Militar</option><option
-                                                    value="264">&nbsp;•&nbsp;&nbsp;•&nbsp;Action Figures M•sica</option><option
-                                                    value="181">&nbsp;•&nbsp;&nbsp;•&nbsp;Bonecas</option><option
-                                                    value="311">Geek</option><option
-                                                    value="318">&nbsp;•&nbsp;&nbsp;•&nbsp;Adesivos Decorativos</option><option
-                                                    value="208">PC</option><option
-                                                    value="209">&nbsp;•&nbsp;&nbsp;•&nbsp;Acessórios</option><option
-                                                    value="210">&nbsp;•&nbsp;&nbsp;•&nbsp;Caixas de Som</option><option
-                                                    value="211">&nbsp;•&nbsp;&nbsp;•&nbsp;Cartões de Memória</option><option
-                                                    value="212">&nbsp;•&nbsp;&nbsp;•&nbsp;Controles</option><option
-                                                    value="265">&nbsp;•&nbsp;&nbsp;•&nbsp;Estabilizadores</option><option
-                                                    value="213">&nbsp;•&nbsp;&nbsp;•&nbsp;Fones</option><option
-                                                    value="238">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos</option><option
-                                                    value="214">&nbsp;•&nbsp;&nbsp;•&nbsp;Mouses</option><option
-                                                    value="215">&nbsp;•&nbsp;&nbsp;•&nbsp;Pen Drive</option><option
-                                                    value="216">&nbsp;•&nbsp;&nbsp;•&nbsp;Placas de Video</option><option
-                                                    value="258">&nbsp;•&nbsp;&nbsp;•&nbsp;Promoções</option><option
-                                                    value="246">&nbsp;•&nbsp;&nbsp;•&nbsp;Revista CD Criança</option><option
-                                                    value="245">&nbsp;•&nbsp;&nbsp;•&nbsp;Revista Full Games</option><option
-                                                    value="286">&nbsp;•&nbsp;&nbsp;•&nbsp;Roteadores</option><option
-                                                    value="217">&nbsp;•&nbsp;&nbsp;•&nbsp;Sistemas Operecionais</option><option
-                                                    value="218">&nbsp;•&nbsp;&nbsp;•&nbsp;Teclados</option><option
-                                                    value="219">&nbsp;•&nbsp;&nbsp;•&nbsp;Volantes</option><option
-                                                    value="220">&nbsp;•&nbsp;&nbsp;•&nbsp;Web Cam</option><option
-                                                    value="280">Pel•cias</option><option
-                                                    value="282">&nbsp;•&nbsp;&nbsp;•&nbsp;Pelúcias Disney</option><option
-                                                    value="283">&nbsp;•&nbsp;&nbsp;•&nbsp;Pelúcias Games</option><option
-                                                    value="285">&nbsp;•&nbsp;&nbsp;•&nbsp;Pelúcias TV &amp; Filmes</option><option
-                                                    value="281">&nbsp;•&nbsp;&nbsp;•&nbsp;Pelúcias Variadas</option><option
-                                                    value="273">PS Vita</option><option
-                                                    value="274">&nbsp;•&nbsp;&nbsp;•&nbsp;Acessórios</option><option
-                                                    value="275">&nbsp;•&nbsp;&nbsp;•&nbsp;Consoles</option><option
-                                                    value="276">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos</option><option
-                                                    value="289">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos Usados</option><option
-                                                    value="221">PS2</option><option
-                                                    value="222">&nbsp;•&nbsp;&nbsp;•&nbsp;Acessórios</option><option
-                                                    value="224">&nbsp;•&nbsp;&nbsp;•&nbsp;Consoles</option><option
-                                                    value="223">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos</option><option
-                                                    value="259">&nbsp;•&nbsp;&nbsp;•&nbsp;Promoções</option><option
-                                                    value="175">PS3</option><option
-                                                    value="179">&nbsp;•&nbsp;&nbsp;•&nbsp;Acessórios</option><option
-                                                    value="267">&nbsp;•&nbsp;&nbsp;•&nbsp;Collector's Edition</option><option
-                                                    value="225">&nbsp;•&nbsp;&nbsp;•&nbsp;Consoles</option><option
-                                                    value="178">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos</option><option
-                                                    value="227">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos Usados</option><option
-                                                    value="226">&nbsp;•&nbsp;&nbsp;•&nbsp;Pré Venda</option><option
-                                                    value="260">&nbsp;•&nbsp;&nbsp;•&nbsp;Promoções</option><option
-                                                    value="293">&nbsp;•&nbsp;&nbsp;•&nbsp;Skin</option><option
-                                                    value="309">PS4</option><option
-                                                    value="315">&nbsp;•&nbsp;&nbsp;•&nbsp;Acessórios</option><option
-                                                    value="317">&nbsp;•&nbsp;&nbsp;•&nbsp;Consoles</option><option
-                                                    value="316">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos</option><option
-                                                    value="323">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos Usados</option><option
-                                                    value="320">&nbsp;•&nbsp;&nbsp;•&nbsp;Skin</option><option
-                                                    value="228">PSP</option><option
-                                                    value="229">&nbsp;•&nbsp;&nbsp;•&nbsp;Acessórios</option><option
-                                                    value="231">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos</option><option
-                                                    value="290">Veículos Miniatura</option><option
-                                                    value="292">&nbsp;•&nbsp;&nbsp;•&nbsp;Escala 1:18</option><option
-                                                    value="295">&nbsp;•&nbsp;&nbsp;•&nbsp;Escala 1:43</option><option
-                                                    value="291">&nbsp;•&nbsp;&nbsp;•&nbsp;Outros</option><option
-                                                    value="202">Wii</option><option
-                                                    value="203">&nbsp;•&nbsp;&nbsp;•&nbsp;Acessórios</option><option
-                                                    value="204">&nbsp;•&nbsp;&nbsp;•&nbsp;Consoles</option><option
-                                                    value="205">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos</option><option
-                                                    value="206">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos Usados</option><option
-                                                    value="207">&nbsp;•&nbsp;&nbsp;•&nbsp;Pré Venda</option><option
-                                                    value="257">&nbsp;•&nbsp;&nbsp;•&nbsp;Promoções</option><option
-                                                    value="304">Wii U</option><option
-                                                    value="307">&nbsp;•&nbsp;&nbsp;•&nbsp;Acessórios</option><option
-                                                    value="306">&nbsp;•&nbsp;&nbsp;•&nbsp;Consoles</option><option
-                                                    value="305">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos</option><option
-                                                    value="308">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos Usados</option><option
-                                                    value="232">Xbox 360</option><option
-                                                    value="233">&nbsp;•&nbsp;&nbsp;•&nbsp;Acessórios</option><option
-                                                    value="268">&nbsp;•&nbsp;&nbsp;•&nbsp;Collector's Edition</option><option
-                                                    value="234">&nbsp;•&nbsp;&nbsp;•&nbsp;Consoles</option><option
-                                                    value="235">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos</option><option
-                                                    value="236">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos Usados</option><option
-                                                    value="237">&nbsp;•&nbsp;&nbsp;•&nbsp;Pré Venda</option><option
-                                                    value="262">&nbsp;•&nbsp;&nbsp;•&nbsp;Promoções</option><option
-                                                    value="294">&nbsp;•&nbsp;&nbsp;•&nbsp;Skin</option><option
-                                                    value="251">&nbsp;•&nbsp;&nbsp;•&nbsp;Xbox Live</option><option
-                                                    value="310">Xbox One</option><option
-                                                    value="313">&nbsp;•&nbsp;&nbsp;•&nbsp;Acessórios</option><option
-                                                    value="314">&nbsp;•&nbsp;&nbsp;•&nbsp;Consoles</option><option
-                                                    value="312">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos</option><option
-                                                    value="321">&nbsp;•&nbsp;&nbsp;•&nbsp;Jogos Usados</option><option
-                                                    value="319">&nbsp;•&nbsp;&nbsp;•&nbsp;Skin Controle</option></select></td>
+                                                    categorias</option></select></td>
                                         <td width="1%" style="padding-left:5px;"><input type="image" src="../img/bt_ok.gif" border="0"
                                                                                         alt="Busca Rápida" title=" Busca Rápida "></td>                     <td
                                             width="1%" style="padding-left:5px;"><a
@@ -2881,7 +2783,7 @@ alt="MercadoPago"></span></td>   </tr> </tbody></table> </td>   </tr>
                                                                             <tbody><tr>
                                                                                     <td align="left" style="color:#000000;">
                                                                                        
-                                                                                        <form id="check_login" name="check_login" method="POST" action="http://localhost/site-php-funshop/view/login.php?action=process&sid=3557e3542a5f9b7bb1a5fdc0a391a270">
+                                                                                        <form id="check_login" name="check_login" method="POST" action="http://localhost/site-php-funshop/control/verifica_conta.php">
                                                                                             <input autocomplete="off" type="hidden" name="sid" id="sid" class="campo_texto" size="50%" value="3557e3542a5f9b7bb1a5fdc0a391a270">Seu Email:<br><input autocomplete="off" type="text" name="login_email" id="login_email" class="campo_texto" maxlength="100" style="width:95%"><br>Senha de acesso:<br><input autocomplete="off" type="password" name="login_senha" id="login_senha" class="campo_texto" maxlength="30" style="width:95%"><br><input type="image" src="../img/bt_entrar.gif" border="0" alt="Login" title=" Login "><br><br>- <a style="color:#000000;" href="http://localhost/site-php-funshop/view/cadastro.php?sid=3557e3542a5f9b7bb1a5fdc0a391a270">Cadastre-se</a><br>- <a style="color:#000000;" href="http://localhost/site-php-funshop/view/recuperar_senha.php?sid=3557e3542a5f9b7bb1a5fdc0a391a270">Esqueceu a sua senha?</a>
                                                                                         </form>
                                                                                         

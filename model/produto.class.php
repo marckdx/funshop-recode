@@ -22,6 +22,10 @@ class produto {
     private $st_produto;
     private $ds_garantia_produto;
 
+    public function getCd_produto() {
+        return $this->cd_produto;
+    }
+
     function __construct($cd_produto, $nm_produto, $ds_produto, $qt_produto, $vl_produto, $pc_desconto_produto, $st_produto, $ds_garantia_produto) {
         $this->cd_produto = $cd_produto;
         $this->nm_produto = $nm_produto;
@@ -31,10 +35,6 @@ class produto {
         $this->pc_desconto_produto = $pc_desconto_produto;
         $this->st_produto = $st_produto;
         $this->ds_garantia_produto = $ds_garantia_produto;
-    }
-
-    public function getCd_produto() {
-        return $this->cd_produto;
     }
 
     public function getNm_produto() {
@@ -63,38 +63,6 @@ class produto {
 
     public function getDs_garantia_produto() {
         return $this->ds_garantia_produto;
-    }
-
-    public function setCd_produto($cd_produto) {
-        $this->cd_produto = $cd_produto;
-    }
-
-    public function setNm_produto($nm_produto) {
-        $this->nm_produto = $nm_produto;
-    }
-
-    public function setDs_produto($ds_produto) {
-        $this->ds_produto = $ds_produto;
-    }
-
-    public function setQt_produto($qt_produto) {
-        $this->qt_produto = $qt_produto;
-    }
-
-    public function setVl_produto($vl_produto) {
-        $this->vl_produto = $vl_produto;
-    }
-
-    public function setPc_desconto_produto($pc_desconto_produto) {
-        $this->pc_desconto_produto = $pc_desconto_produto;
-    }
-
-    public function setSt_produto($st_produto) {
-        $this->st_produto = $st_produto;
-    }
-
-    public function setDs_garantia_produto($ds_garantia_produto) {
-        $this->ds_garantia_produto = $ds_garantia_produto;
     }
 
 }
