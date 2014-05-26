@@ -18,8 +18,9 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
         $valor = mysql_fetch_array($result);
         $_SESSION["ds_email"] = $_POST["login_email"];
         $_SESSION["nm_usuario"] = $valor["nm_usuario"];
-        header("Location: ../view/index.php");
+     header("Location: ../view/index.php");
     } else {
         header("Location: http://localhost/site-php-funshop/view/login.php?action=loginerror");
     }
+     header("Location: http://localhost/site-php-funshop/view/index.php");
 }
