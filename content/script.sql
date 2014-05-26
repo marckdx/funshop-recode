@@ -22,10 +22,10 @@ CREATE TABLE tb_login (
   CONSTRAINT tb_login_ibfk_1 FOREIGN KEY (cd_usuario) REFERENCES tb_usuario (cd_usuario)
 );
 
-INSERT INTO tb_login VALUES (1,1,'marco@elit2.com','marco'),(2,2,'jhony@elit2.com','jhony'),(3,3,'augusto@instasoft.com','augusto');
+INSERT INTO tb_login VALUES (1,1,'marco@elit2.com','marco'),(2,2,'jhony@elit2.com','jhony'),(3,3,'augusto@instasoft.com','augusto'),(4,4,'gilberto@elit2.com','gilberto'),(5,5,'valmir@elit2.com','valmir'),(6,6,'sergio@instasoft.com','sergio');
 
 CREATE TABLE tb_produto(
- cd_produto	int,
+ cd_produto int auto_increment,
  nm_produto varchar(100) not null,
  ds_produto varchar(400) not null,
  qt_produto int not null,
@@ -34,7 +34,7 @@ CREATE TABLE tb_produto(
  st_produto boolean not null,
  ds_garantia_produto varchar(200) not null,
  primary key(cd_produto)
-)
+);
 
 INSERT INTO tb_produto values(1,'PS3 Ratchet & Clank Future: Tools of Destruction', 'Desde 2002, Ratchet vem promovendo a destruição por onde passa.Ele tem uma aparência de mascote, mas é mestre no uso de armas pesadas.Com essa combinação, se tornou uma das séries mais populares dos consoles da Sony.', 
 								50 , 79.00 , 0.05 , 1 ,'90 dias - Contra defeitos de Fabricação.Não Trocamos CDs, DVDs ou Blu-ray riscados.');
