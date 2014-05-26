@@ -2,10 +2,7 @@
 session_start();
 require_once '../control/utilidades.class.php';
 
-//    
-//    if(isset($_SESSION["nm_usuario"])){
-//        header("Location: http://localhost/site-php-funshop/view/login.php");
-//    }
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- saved from url=(0029)http://www.funshopnet.com.br/ -->
@@ -441,7 +438,7 @@ href="http://www.funshopnet.com.br/xbox-360-m232"><span>Xbox
 node-15" class="last"><a href="http://www.funshopnet.com.br/xbox-
 one-m310"><span>Xbox One</span></a></li></ul>      </div>         </td>
 </tr> </tbody></table> <!-- FIM menu horizontal de categorias //--> <form
-id="barra_quick_find" name="barra_quick_find" method="POST"
+id="barra_quick_find" name="barra_quick_find" method="GET"
 action="busca_avancada.php">   <table
 width="100%" border="0" cellspacing="0" cellpadding="0" style="" height="40"
 background="../img/bg_barra_busca.gif">         <tbody><tr>             <td
@@ -1146,7 +1143,7 @@ alt="MercadoPago"></span></td>   </tr> </tbody></table> </td>   </tr>
                                                   one-m310"><span>Xbox One</span></a></li></ul>      </div>         </td>
                 </tr> </tbody></table> <!-- FIM menu horizontal de categorias //--> <form
             id="barra_quick_find" name="barra_quick_find" method="POST"
-            action="busca_avancada_resultado.php">   <table
+            action="busca.php">   <table
                 width="100%" border="0" cellspacing="0" cellpadding="0" style="" height="40"
                 background="../img/bg_barra_busca.gif">         <tbody><tr>             <td
                             width="99%">             <table width="1" border="0" align="right"
@@ -1179,7 +1176,7 @@ alt="MercadoPago"></span></td>   </tr> </tbody></table> </td>   </tr>
                                                                                                           repeat:repeat-y;color:#000000;">   <tbody><tr> <td><table class="texto11"
                                                                                     border="0" width="100%" cellspacing="0" cellpadding="0">   <tbody><tr>     <td
                                                                                         align="center"><form id="quick_find" name="quick_find" method="POST"
-                                                                                                         action="busca_avancada_resultado.php"><table
+                                                                                                         action="busca.php"><table
                                                                                                 border="0" cellspacing="2" cellpadding="0" class="texto11">   <tbody><tr>
                                                                                                         <td width="80%"><input autocomplete="off" type="text" name="keywords"
                                                                                                                                id="keywords" class="campo_texto" maxlength="25" style="width:90%;"></td>
