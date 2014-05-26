@@ -1623,10 +1623,9 @@ alt="MercadoPago"></span></td>   </tr> </tbody></table> </td>   </tr>
                                                                         color:BOX_HEADING_CHAMADAS_COR_FUNDO;color:BOX_HEADING_CHAMADAS_COR_TEXTO;">
                                                             <tbody><tr> <td><table class="texto11" border="0" width="100%" cellspacing="0"
                                                                                    cellpadding="0" style="background: BOX_HEADING_CHAMADAS_COR_FUNDO">
-                                                                            <tbody><tr>     <td align="center"><iframe src="./Fun Shop - A Sua loja de
-                                                                                                                       Games, Action figures e Brinquedos._files/saved_resource.htm" scrolling="no"
+                                                                            <tbody><tr>     <td align="center"><img src="../img/facebook.png" scrolling="no"
                                                                                                                        frameborder="0" style="border:none; overflow:hidden; width:160px;
-                                                                                                                       height:410px;" allowtransparency="true"></iframe></td>   </tr>
+                                                                                                                       height:410px;" allowtransparency="true"/></td>   </tr>
                                                                             </tbody></table> </td>   </tr> </tbody></table> </td></tr><tr><td
                                                         class="boxes_left"><table class="texto11" border="0" width="100%"
                                                                               cellspacing="0" cellpadding="0"> </table> <table class="texto11" border="0"
