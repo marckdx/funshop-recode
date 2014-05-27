@@ -1034,6 +1034,16 @@ $(document).ready(function(){});
                     <!--
                         Início do php
                     -->
+                   <?php
+if ($_SERVER["REQUEST_METHOD"] != 'POST' ||  $_REQUEST['keywords']==""){
+    echo "Não há busca";
+}else {
+    $busca = $_REQUEST['keywordds'];
+    
+    
+}
+?>       
+
 
                                     <!--
                                     Fim do php
