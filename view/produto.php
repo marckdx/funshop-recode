@@ -1,3 +1,9 @@
+<?php
+session_start();
+require_once '../control/utilidades.class.php';
+
+
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- saved from url=(0095)https://ecommerce2.iset.com.br/funshopnet.com.br/login.php?sid=df90b5afc37d884f3be6ee568906c99e -->
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="br" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -471,8 +477,15 @@ $(document).ready(function(){});
 <tbody><tr><td background="../img/bg_tb_header.gif">
   <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tbody><tr>
-    <td class="texto11" width="50%" height="26" style="padding:0px;color:#000000;font-size:12px;">&nbsp;Boa tarde, faça o seu <a href="login.php" style="text-decoration:underline;color:#000000;">login</a> ou clique aqui para se <a href="https://ecommerce2.iset.com.br/funshopnet.com.br/cadastro.php?sid=df90b5afc37d884f3be6ee568906c99e" style="text-decoration:underline;color:#000000;">cadastrar</a>.</td>
-    <td width="50%" height="26">
+                                    <td class="texto11" width="50%" height="26" style="padding:0px;color:#000000;font-size:12px;">&nbsp;
+                                        <?php  echo utilidades::getSaudacao();
+                                        if (isset($_SESSION["nm_usuario"])) {
+                                            echo $_SESSION["nm_usuario"] . ", clique para <a href='sair.php' style='text-decoration:underline;color:#000000;'>sair</a>";
+                                        } else {
+                                            echo ", faça o seu <a href='login.php' style='text-decoration:underline;color:#000000;'>login</a> ou clique aqui para se <a href='novaconta.php' style='text-decoration:underline;color:#000000;'>cadastrar</a>";
+                                        }
+                                        ?> .</td>
+                                    <td width="50%" height="26">
 		<table border="0" align="right" cellpadding="0" cellspacing="0">
       <tbody><tr>
         <td><a href="https://ecommerce2.iset.com.br/funshopnet.com.br/minhaconta.php?sid=df90b5afc37d884f3be6ee568906c99e"><img src="../img/minhaconta.gif" border="0" alt="" width="80" height="16"></a></td>        <td width="5">&nbsp;</td>
