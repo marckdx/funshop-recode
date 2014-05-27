@@ -28,7 +28,7 @@ CREATE TABLE `tb_login` (
   `cd_login` int(5) NOT NULL AUTO_INCREMENT,
   `cd_usuario` int(5) NOT NULL,
   `ds_login` varchar(50) NOT NULL,
-  `ds_senha` varchar(13) NOT NULL,
+  `ds_senha` varchar(30) NOT NULL,
   PRIMARY KEY (`cd_login`),
   KEY `cd_usuario` (`cd_usuario`),
   CONSTRAINT `tb_login_ibfk_1` FOREIGN KEY (`cd_usuario`) REFERENCES `tb_usuario` (`cd_usuario`)
@@ -41,7 +41,7 @@ CREATE TABLE `tb_login` (
 
 LOCK TABLES `tb_login` WRITE;
 /*!40000 ALTER TABLE `tb_login` DISABLE KEYS */;
-INSERT INTO `tb_login` VALUES (1,1,'marco@elit2.com','marco'),(2,2,'jhony@elit2.com','jhony'),(3,3,'augusto@instasoft.com','augusto'),(4,4,'ursogil@elit2.com','urso'),(5,5,'valmirsl@elit2.com','valmir'),(6,6,'vagner@fatecpg.com.br','vagner');
+INSERT INTO `tb_login` VALUES (1,1,'marco@elit2.com','f5888d0bb58d611107e11f7cbc41c97a'),(2,2,'jhony@elit2.com','134f0cc06a157bc63756af42bbf6748d'),(3,3,'augusto@instasoft.com','70dc9794fd98431263b895f1344860c7'),(4,4,'ursogil@elit2.com','0df2c1144fbf9502996d97aaa5bdaa3d'),(5,5,'valmirsl@elit2.com','5b7e2c256f73f8143db4e8d27d621424'),(6,6,'vagner@fatecpg.com.br','396ca54ee460f3ef202561b02363643e');
 /*!40000 ALTER TABLE `tb_login` ENABLE KEYS */;
 UNLOCK TABLES;
 
