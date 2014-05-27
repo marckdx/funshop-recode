@@ -516,7 +516,7 @@ $(document).ready(function(){});
 					<td style="padding-left:5px;"><input autocomplete="off" type="text" name="keywords" id="keywords" class="campo_texto" size="25" maxlength="30"></td>
 					<td style="padding-left:5px;"><select name="categories_id" id="categories_id"><option value="" selected="">Todas as categorias</option></select></td>
 					<td width="1%" style="padding-left:5px;"><input type="image" src="../img/bt_ok.gif" border="0" alt="Busca Rápida" title=" Busca Rápida "></td>
-					<td width="1%" style="padding-left:5px;"><a href="http://www.funshopnet.com.br/busca_avancada.php"><img src="../img/bt_busca_avancada.gif" border="0" alt="Busca avançada" title="Busca avançada" width="100" height="22"></a></td>
+					<td width="1%" style="padding-left:5px;"></td>
 				</tr>
 			</tbody></table>
 			</td>
@@ -609,7 +609,7 @@ $(document).ready(function(){});
     <td width="20%"><input type="image" src="../img/bt_ok.gif" border="0" alt=""></td>
   </tr>
   <tr>
-    <td colspan="2" align="center"><a href="http://www.funshopnet.com.br/busca_avancada.php"><b>Busca Avançada</b></a></td>
+    <td colspan="2" align="center"></td>
   </tr>
   <tr>
     <td colspan="2" align="center" style="color:#000000;">Use palavras-chave para achar o que procura.</td>

@@ -1155,10 +1155,7 @@ alt="MercadoPago"></span></td>   </tr> </tbody></table> </td>   </tr>
                                                     categorias</option></select></td>
                                         <td width="1%" style="padding-left:5px;"><input type="image" src="../img/bt_ok.gif" border="0"
                                                                                         alt="Busca Rápida" title=" Busca Rápida "></td>                     <td
-                                            width="1%" style="padding-left:5px;"><a
-                                                href="busca_avancada.php"><img src="../img/bt_busca_avancada.gif"
-                                                                           border="0" alt="Busca avançada" title="Busca avançada" width="100"
-                                                                           height="22"></a></td>                 </tr>             </tbody></table>
+                                            width="1%" style="padding-left:5px;"></td>                 </tr>             </tbody></table>
                         </td>         </tr>     </tbody></table>     </form> <table border="0"
                                                                     cellpadding="0" cellspacing="0" width="100%" style="" class="corpo">
             <tbody><tr>     <td class="corpo_conteudo">       <table border="0"
@@ -1179,9 +1176,7 @@ alt="MercadoPago"></span></td>   </tr> </tbody></table> </td>   </tr>
                                                                                                         <td width="80%"><input autocomplete="off" type="text" name="keywords"
                                                                                                                                id="keywords" class="campo_texto" maxlength="25" style="width:90%;"></td>
                                                                                                         <td width="20%"><input type="image" src="../img/bt_ok.gif" border="0" alt=""></td>   </tr>
-                                                                                                    <tr>     <td colspan="2" align="center"><a
-                                                                                                                href="busca_avancada.php"><b>Busca
-                                                                                                                    Avançada</b></a></td>   </tr>   <tr>     <td colspan="2" align="center"
+                                                                                                    <tr>     <td colspan="2" align="center"></td>   </tr>   <tr>     <td colspan="2" align="center"
                                                                                                                                                  style="color:#000000;">Use palavras-chave para achar o que procura.</td>
                                                                                                     </tr> </tbody></table></form></td>   </tr> </tbody></table> </td>   </tr>
                                                             </tbody></table> <table class="texto11" border="0" width="100%"
