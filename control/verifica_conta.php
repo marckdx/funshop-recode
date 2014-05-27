@@ -3,7 +3,7 @@
 require_once '../control/conexao.class.php';
 
 $login = $_POST["login_email"];
-$senha = $_POST["login_senha"];
+$senha = md5($_POST["login_senha"]);
 
 if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     header("Location: http://localhost/site-php-funshop/view/login.php?action=loginerror");
@@ -22,5 +22,5 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     } else {
         header("Location: http://localhost/site-php-funshop/view/login.php?action=loginerror");
     }
-     header("Location: http://localhost/site-php-funshop/view/index.php");
+    
 }

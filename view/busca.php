@@ -28,7 +28,17 @@ require_once '../control/utilidades.class.php';
 <meta name="CATEGORY" content="Internet">
 <meta name="google-site-verification" content="WLsC8vVHMqKnrrXaChEK1A1nR84OO7Uh9TWr89inNII">
 <meta name="keywords" content="kotobukiya, marvel select, star wars, hot toys, toynami, funku, mcfarlane toys, bandai, sideshow, neca, square enix, play arts, PS3, Nintendo wii, PSP, DSi, Xbox 360, Brinquedos, Action Figures, Action figures de games, jogos, games, acessorios, consoles, videogames, controles, action figures, herois, bonecos, fox games, mini games, jogos de pc, loja de games, loja de games franca, ps3 usado, jogos ps3 usado, jogos xbox 360 usado, jogos psp, ps3 destravado, xbox slim destravado, comprar jogos ps3, fun shop, fun shop net, fun shop franca, action figures franca, venda action figures, action figures de games">
-<title>ps4 - Fun Shop - A Sua loja de Games, Action figures e Brinquedos.</title>
+<title>
+    FUNSHOP - 
+    <?php
+    if(isset($_REQUEST['keywords'])){
+        echo 'Pesquisa: '.$_REQUEST['keywords'];
+    }else{
+        echo 'Busca';
+    }
+    ?>
+    
+</title>
 <link rel="stylesheet" type="text/css" href="../css/fwj-validate.css">
 <link rel="stylesheet" type="text/css" href="../css/fwj-bt-buttons.css">
 <link rel="stylesheet" type="text/css" href="../css/fwj-bt-icons.css">
@@ -503,7 +513,7 @@ $(document).ready(function(){});
   <tbody><tr>
     <td>
     	<div id="menu_categoria">
-			<ul><li id="categ-node-1" class="first"><a href="http://localhost/3ds-e-ds-m241"><span>3DS e DS</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-2"><a href="http://localhost/action-figures-m180"><span>Action Figures</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-3"><a href="http://localhost/geek-m311"><span>Geek</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-4"><a href="http://localhost/pc-m208"><span>PC</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-5"><a href="http://localhost/pelucias-m280"><span>Pelúcias</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-6"><a href="http://localhost/ps-vita-m273"><span>PS Vita</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-7"><a href="http://localhost/ps2-m221"><span>PS2</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-8"><a href="http://localhost/ps3-m175"><span>PS3</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-9"><a href="http://localhost/ps4-m309"><span>PS4</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-10"><a href="http://localhost/psp-m228"><span>PSP</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-11"><a href="http://localhost/veiculos-miniatura-m290"><span>Veículos Miniatura</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-12"><a href="http://localhost/wii-m202"><span>Wii</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-13"><a href="http://localhost/wii-u-m304"><span>Wii U</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-14"><a href="http://localhost/xbox-360-m232"><span>Xbox 360</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-15" class="last"><a href="http://localhost/xbox-one-m310"><span>Xbox One</span></a></li></ul>      </div>
+			<ul><li id="categ-node-1" class="first"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=ds"><span>3DS e DS</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-2"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=action-figures"><span>Action Figures</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-3"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=geek"><span>Geek</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-4"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=pc"><span>PC</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-5"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=pelucias"><span>Pelúcias</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-6"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=ps-vita"><span>PS Vita</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-7"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=ps2"><span>PS2</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-8"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=ps3"><span>PS3</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-9"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=ps4"><span>PS4</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-10"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=psp-m228"><span>PSP</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-11"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=veiculos-miniatura-m290"><span>Veículos Miniatura</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-12"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=wii-m202"><span>Wii</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-13"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=wii-u-m304"><span>Wii U</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-14"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=xbox-360"><span>Xbox 360</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-15" class="last"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=xbox-one"><span>Xbox One</span></a></li></ul>      </div>
 		</td>
 	</tr>
 </tbody></table>
@@ -827,7 +837,7 @@ $(document).ready(function(){});
     <td class="subitem_menu_categorias_vertical">&nbsp;&nbsp;<a href="http://localhost/wii-u-jogos-usados-m304_308"><font color="#637089">Jogos Usados</font></a></td>
   </tr>
   <tr>
-    <td class="item_menu_categorias_vertical css_custom_bxbox_360/b" style="border-bottom:1px solid #f2f8fc" background="../img/box_categoria_vermelho.png"><a href="http://localhost/xbox-360-m232"><font color="#f9fafc"><b>Xbox 360</b></font></a></td>
+    <td class="item_menu_categorias_vertical css_custom_bxbox_360/b" style="border-bottom:1px solid #f2f8fc" background="../img/box_categoria_vermelho.png"><a href="http://localhost/xbox-360"><font color="#f9fafc"><b>Xbox 360</b></font></a></td>
   </tr>
   <tr>
     <td class="subitem_menu_categorias_vertical">&nbsp;&nbsp;<a href="http://localhost/xbox-360-acessorios-m232_233"><font color="#637089">Acessórios</font></a></td>
