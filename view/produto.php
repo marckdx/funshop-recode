@@ -618,7 +618,7 @@ $(document).ready(function(){});
 <td><img src="../img/cabecalho_categorias.png" alt="" border="0" height="34" width="169"></td>
   </tr>
 </tbody></table>
-<table class="texto11" style="background-image:url(/imagens/funshopnet.com.br/boxes/bg_meio.png);background-repeat:repeat-y;color:#000000;" border="0" cellpadding="4" cellspacing="0" width="100%">
+<table class="texto11" style="background-image:url(/imagens/funshopnet.com.br/boxes/bg_meio.png);background-repeat:repeat-y;color:#000000;" border="0" cellpadding="4" cellspacing="0" width="82%">
   <tbody><tr>
 <td><table class="menu_categorias_vertical" border="0" cellpadding="6" cellspacing="0" width="100%">
   <tbody><tr>
