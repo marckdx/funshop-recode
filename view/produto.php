@@ -1,7 +1,9 @@
 <?php
 session_start();
 require_once '../control/utilidades.class.php';
+require_once '../control/conexao.class.php';
 ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- saved from url=(0095)https://ecommerce2.iset.com.br/funshopnet.com.br/login.php?sid=df90b5afc37d884f3be6ee568906c99e -->
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="br" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -792,9 +794,9 @@ $(document).ready(function(){});
   </tr>
 </tbody></table>
 </td></tr></tbody></table>
-</td>
+</td><?php $cd_produto = $_REQUEST[id];?>
                     <td valign="top" bgcolor="#ffffff" class="coluna_centro">
-          <div class="texto_cabecalho_pagina"><h1>PS3 FaceBreaker</h1></div>
+                        <div class="texto_cabecalho_pagina"><h1><?php printf mysql_query("SELECT nm_produto FROM tb_produto WHERE cd_produto = " . $cd_produto); ?></h1></div>
 					<form id="detalhe_produto" name="detalhe_produto" method="post" action="http://www.funshopnet.com.br/produto_info.php?action=add_product&id_produto=394" onsubmit="return CheckProductForm(394,this,false);">          <table cellpadding="0" cellspacing="0" border="0" width="100%">
             <tbody><tr>
               <td rowspan="4" valign="top" style="padding-right:20px;" width="30%">
