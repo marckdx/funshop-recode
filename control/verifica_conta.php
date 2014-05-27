@@ -9,10 +9,9 @@ $senha = md5($_POST["login_senha"]);
 if ($_SERVER['REQUEST_METHOD'] != 'POST') {
     header("Location: http://localhost/site-php-funshop/view/login.php?action=loginerror");
 } else {
-    if(login::verificaLogin($login, $senha)==true){
-        // header("Location: http://localhost/site-php-funshop/view/index.php?action=welcome");
-        echo 'sim';
-    }else{
-        // header("Location: http://localhost/site-php-funshop/view/login.php?action=loginerror");
+    if (login::verificaLogin($login, $senha) == true) {
+        header("Location: http://localhost/site-php-funshop/view/index.php?action=welcome");
+    } else {
+        header("Location: http://localhost/site-php-funshop/view/login.php?action=loginerror");
     }
 }

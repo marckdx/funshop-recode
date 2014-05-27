@@ -17,7 +17,7 @@ class login {
 
     public static function verificaLogin($login, $senha) {
         $conexao = new conexao();
-        $result = $mysql_query($sql) or die(mysql_error());("SELECT u.nm_usuario, u.vl_saldo FROM tb_usuario u, tb_login l "
+        $result = mysql_query("SELECT u.nm_usuario, u.vl_saldo FROM tb_usuario u, tb_login l "
                         . "WHERE l.ds_login='$login' AND l.ds_senha='$senha' AND l.cd_usuario=u.cd_usuario");
         
         if (mysql_num_rows($result) > 0) {
