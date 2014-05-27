@@ -1,21 +1,24 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] != 'POST' ||  $_REQUEST['keywords']==""){
+if ($_SERVER["REQUEST_METHOD"] != 'POST' || $_REQUEST['keywords'] == "") {
     echo "Não há busca";
-}else {
+} else {
+    $con = new conexao();
     $busca = $_REQUEST['keywordds'];
-}
-?>                   
-
-
-
-
-
-<tbody><tr>
-        <td>Mostrando <b>1</b> para <b>20</b> (de <b>29</b> registros)</td>
+    $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE'%" . $busca . "%' OR ds_produto LIKE'%" . $busca . "%'");
+    $cont = 1;
+    
+    ?> <tbody><tr>
+        <td>Mostrando <b>1</b> para <b><?php mysql_num_rows($result);?></b> (de <b>29</b> registros)</td>
         <td align="right">&nbsp;<span class="pagina_atual"><b>1</b></span>&nbsp;&nbsp;&nbsp;</td>
     </tr>
 </tbody></table>
+    <?php
+    while ($valor = mysql_fetch_array($result)) {
+        ?>
+<!--imagem divisão-->
+<?php if($cont%4==0){ ?>
 <img src="../img/pixel_trans.gif" border="0" alt="" width="100%" height="10">
+<?php }?>
 <div class="box_template">
     <div class="content" style="color:#000000;background:none;border-bottom:1px dotted #cccccc;" data-itens="4">
         <ul class="content-itens">
@@ -44,7 +47,24 @@ if ($_SERVER["REQUEST_METHOD"] != 'POST' ||  $_REQUEST['keywords']==""){
 
     </div>
 
-</div><img src="../img/pixel_trans.gif" border="0" alt="" width="100%" height="10"><table border="0" width="100%" cellspacing="0" cellpadding="0" class="paginacao">
+</div>
+<!--Imagem de divisão-->
+<?php if($cont%4==0){ ?>
+<img src="../img/pixel_trans.gif" border="0" alt="" width="100%" height="10">
+<?php }?>
+<table border="0" width="100%" cellspacing="0" cellpadding="0" class="paginacao">
     <tbody><tr>
             <td>Mostrando <b>1</b> para <b>20</b> (de <b>29</b> registros)</td>
             <td align="right">&nbsp;<span class="pagina_atual"><b>1</b></span>&nbsp;&nbsp;&nbsp;</td>
+
+        <?php
+       
+     $cont++;  
+    }
+}
+?>                   
+
+
+
+
+
