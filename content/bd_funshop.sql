@@ -27,7 +27,7 @@ DROP TABLE IF EXISTS `tb_login`;
 CREATE TABLE `tb_login` (
   `cd_login` int(5) NOT NULL AUTO_INCREMENT,
   `cd_usuario` int(5) NOT NULL,
-  `ds_login` varchar(50) NOT NULL,
+  `ds_login` varchar(32) NOT NULL,
   `ds_senha` varchar(30) NOT NULL,
   PRIMARY KEY (`cd_login`),
   KEY `cd_usuario` (`cd_usuario`),
