@@ -796,24 +796,8 @@ $(document).ready(function(){});
                         <a rel="gallery" href="../img/facebreaker_ps3_1.jpg" title="PS3 FaceBreaker">
                          <img src="../img/1301930654-250x289-facebreaker_ps3_1.jpg" border="0" title="PS3 FaceBreaker" width="250" height="289" tabindex="0" class="etalage_thumb_image" style="display: inline;">                         <img data-width="250" data-height="289" class="etalage_source_image" title="PS3 FaceBreaker" src="../img/facebreaker_ps3_1.jpg">
                         </a> 
-                      </li>
-                                                      <li class="etalage_thumb thumb_2" style="background-image: none;">
-                                  <a rel="gallery" href="../img/facebreaker_ps3_2.jpg" title="PS3 FaceBreaker">
-                                    <img src="../img/1301930655-250x200-facebreaker_ps3_2.jpg" border="0" title="PS3 FaceBreaker" width="250" height="200" tabindex="1" class="etalage_thumb_image" style="display: inline;">                                    <img data-width="250" data-height="200" class="etalage_source_image" title="PS3 FaceBreaker" src="../img/facebreaker_ps3_2.jpg">
-                                  </a>  
-                                </li>
-                                                              <li class="etalage_thumb thumb_3" style="background-image: none;">
-                                  <a rel="gallery" href="../img/facebreaker_ps3_3.jpg" title="PS3 FaceBreaker">
-                                    <img src="../img/1301930656-250x200-facebreaker_ps3_3.jpg" border="0" title="PS3 FaceBreaker" width="250" height="200" tabindex="2" class="etalage_thumb_image" style="display: inline;">                                    <img data-width="250" data-height="200" class="etalage_source_image" title="PS3 FaceBreaker" src="../img/facebreaker_ps3_3.jpg">
-                                  </a>  
-                                </li>
-                                                              <li class="etalage_thumb thumb_4" style="background-image: none;">
-                                  <a rel="gallery" href="../img/facebreaker_ps3_4.jpg" title="PS3 FaceBreaker">
-                                    <img src="../img/1301930652-250x200-facebreaker_ps3_4.jpg" border="0" title="PS3 FaceBreaker" width="250" height="200" tabindex="3" class="etalage_thumb_image" style="display: inline;">                                    <img data-width="250" data-height="200" class="etalage_source_image" title="PS3 FaceBreaker" src="../img/facebreaker_ps3_4.jpg">
-                                  </a>  
-                                </li>
-                              			
-                      <li class="etalage_magnifier hidden" style="margin: 0px; padding: 0px; left: 100px; top: 100px; display: none;"><div style="margin: 0px; padding: 0px; width: 150px; height: 150px;"><img src="../img/1301930654-250x289-facebreaker_ps3_1.jpg" style="margin: 0px; padding: 0px; width: 350px; height: 350px; display: inline;"></div></li><li class="etalage_icon" style="display: list-item; top: 328px; left: 20px;">&nbsp;</li><li class="etalage_small_thumbs" style="width: 362px; top: 372px;"><ul style="width: 844px;"><li class="etalage_smallthumb_first etalage_smallthumb_navtoend" style="opacity: 0.3; margin: 0px 10px 0px 0px;"><img class="etalage_small_thumb" src="../img/1301930652-250x200-facebreaker_ps3_4.jpg" width="106" style="width: 106px; height: 106px;"></li><li class="etalage_smallthumb_active" style="opacity: 1; margin: 0px 10px 0px 0px;"><img class="etalage_small_thumb" src="../img/1301930654-250x289-facebreaker_ps3_1.jpg" width="106" style="width: 106px; height: 106px;"></li><li class="etalage_smallthumb_last" style="opacity: 0.3; margin: 0px 10px 0px 0px;"><img class="etalage_small_thumb" src="../img/1301930655-250x200-facebreaker_ps3_2.jpg" width="106" style="width: 106px; height: 106px;"></li><li style="opacity: 0.3; margin: 0px 10px 0px 0px;"><img class="etalage_small_thumb" src="../img/1301930656-250x200-facebreaker_ps3_3.jpg" width="106" style="width: 106px; height: 106px;"></li><li style="opacity: 0.3; margin: 0px 10px 0px 0px;"><img class="etalage_small_thumb" src="../img/1301930652-250x200-facebreaker_ps3_4.jpg" width="106" style="width: 106px; height: 106px;"></li><li class="etalage_smallthumb_navtostart" style="opacity: 0.3; margin: 0px 10px 0px 0px;"><img class="etalage_small_thumb" src="../img/1301930654-250x289-facebreaker_ps3_1.jpg" width="106" style="width: 106px; height: 106px;"></li></ul></li></ul>
+                      </li>    			
+                      </ul>
                     </td>
                   </tr>
                   <tr>
