@@ -1,8 +1,6 @@
 <?php
 session_start();
 require_once '../control/utilidades.class.php';
-
-
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- saved from url=(0029)http://www.funshopnet.com.br/ -->

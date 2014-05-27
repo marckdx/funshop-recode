@@ -1,3 +1,8 @@
+<?php
+session_start();
+require_once '../control/utilidades.class.php';
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- saved from url=(0057)http://localhost/busca_avancada_resultado.php -->
 
@@ -470,7 +475,15 @@ $(document).ready(function(){});
 <tbody><tr><td background="../img/bg_tb_header.gif">
   <table border="0" cellpadding="0" cellspacing="0" width="100%">
   <tbody><tr>
-    <td class="texto11" width="50%" height="26" style="padding:0px;color:#000000;font-size:12px;">&nbsp;Boa tarde, faça o seu <a href="https://ecommerce2.iset.com.br/funshopnet.com.br/login.php?sid=df90b5afc37d884f3be6ee568906c99e" style="text-decoration:underline;color:#000000;">login</a> ou clique aqui para se <a href="https://ecommerce2.iset.com.br/funshopnet.com.br/cadastro.php?sid=df90b5afc37d884f3be6ee568906c99e" style="text-decoration:underline;color:#000000;">cadastrar</a>.</td>
+    <td class="texto11" width="50%" height="26" style="padding:0px;color:#000000;font-size:12px;">&nbsp;
+    <?php  echo utilidades::getSaudacao()." ";
+                                        if (isset($_SESSION["nm_usuario"])) {
+                                            echo $_SESSION["nm_usuario"] . ", clique para <a href='sair.php' style='text-decoration:underline;color:#000000;'>sair</a>";
+                                        } else {
+                                            echo ", faça o seu <a href='http://localhost/site-php-funshop/view/login.php' style='text-decoration:underline;color:#000000;'>login</a> ou clique aqui para se <a href='http://localhost/site-php-funshop/view/novaconta.php' style='text-decoration:underline;color:#000000;'>cadastrar</a>";
+                                        }
+                                        ?>
+        </td>
     <td width="50%" height="26">
 		<table border="0" align="right" cellpadding="0" cellspacing="0">
       <tbody><tr>
@@ -1007,445 +1020,14 @@ $(document).ready(function(){});
               <tbody><tr>
                 <td>
                 <table border="0" width="100%" cellspacing="0" cellpadding="0" class="paginacao">
-  <tbody><tr>
-    <td>Mostrando <b>1</b> para <b>20</b> (de <b>29</b> registros)</td>
-    <td align="right">&nbsp;<span class="pagina_atual"><b>1</b></span>&nbsp;&nbsp;<a href="http://localhost/busca_avancada_resultado.php?page=2" class="numero_pagina" title=" Página 2 "><u>2</u></a>&nbsp;&nbsp;|&nbsp;<a href="http://localhost/busca_avancada_resultado.php?page=2" class="link_proxima" title=" Próxima Página ">Próxima&nbsp;»</a>&nbsp;</td>
-  </tr>
-</tbody></table>
-<img src="../img/pixel_trans.gif" border="0" alt="" width="100%" height="10">
-			<div class="box_template">
-				<div class="content" style="color:#000000;background:none;border-bottom:1px dotted #cccccc;" data-itens="4">
-					<ul class="content-itens">
-						<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/headset-sony-gold-71-wireless-ps4_ps3_ps-vita-p3037">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1398777114-160x160-headset_sony_gold_wireless_ps4_1.jpg" border="0" alt="Headset Sony Gold 7.1 Wireless PS4/PS3/PS Vita" title="Headset Sony Gold 7.1 Wireless PS4/PS3/PS Vita" width="160" height="160"></div>
-
-										<b><div class="nome">Headset Sony Gold 7.1 Wireless PS4/PS3/PS Vita</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;490,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;25,52</b>  no cartão ou <b>R$&nbsp;465,50</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									<div class="marks"><img src="../img/lancamento.gif" border="0" alt="" width="114" height="39"></div>
-
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/headset-sony-gold-71-wireless-ps4_ps3_ps-vita-p3037" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/ps4-lego-the-hobbit-p3034">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1398714356-160x160-lego_the_hobbit_ps4_1.jpg" border="0" alt="PS4 Lego - The Hobbit" title="PS4 Lego - The Hobbit" width="160" height="160"></div>
-
-										<b><div class="nome">PS4 Lego - The Hobbit</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;219,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;11,41</b>  no cartão ou <b>R$&nbsp;208,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									<div class="marks"><img src="../img/lancamento.gif" border="0" alt="" width="114" height="39"></div>
-
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/ps4-lego-the-hobbit-p3034" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/skin-adesiva-ps4-fibra-de-carbono--p3001">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1396368087-160x160-fibra_carbono1_1.jpg" border="0" alt="Skin Adesiva PS4 Fibra de Carbono" title="Skin Adesiva PS4 Fibra de Carbono" width="160" height="160"></div>
-
-										<b><div class="nome">Skin Adesiva PS4 Fibra de Carbono </div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;39,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;2,03</b>  no cartão ou <b>R$&nbsp;37,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/skin-adesiva-ps4-fibra-de-carbono--p3001" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/ps4-thief-p2982">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1395847204-160x160-thief_ps4_1.jpg" border="0" alt="PS4 Thief" title="PS4 Thief" width="126" height="160"></div>
-
-										<b><div class="nome">PS4 Thief</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;199,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;10,36</b>  no cartão ou <b>R$&nbsp;189,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									<div class="marks"><img src="../img/lancamento.gif" border="0" alt="" width="114" height="39"></div>
-
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/ps4-thief-p2982" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/skin-adesiva-ps4-nintendinho-p2894">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1393350778-160x160-nintendinho_1.jpg" border="0" alt="Skin Adesiva PS4 Nintendinho" title="Skin Adesiva PS4 Nintendinho" width="160" height="160"></div>
-
-										<b><div class="nome">Skin Adesiva PS4 Nintendinho</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;39,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;2,03</b>  no cartão ou <b>R$&nbsp;37,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									<div class="marks"><img src="../img/lancamento.gif" border="0" alt="" width="114" height="39"></div>
-
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/skin-adesiva-ps4-nintendinho-p2894" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/skin-adesiva-ps4-killzone-shadow-fall-2-p2891">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1393350499-160x160-killzone_shadow2_1.jpg" border="0" alt="Skin Adesiva PS4 Killzone Shadow Fall - 2" title="Skin Adesiva PS4 Killzone Shadow Fall - 2" width="160" height="160"></div>
-
-										<b><div class="nome">Skin Adesiva PS4 Killzone Shadow Fall - 2</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;39,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;2,03</b>  no cartão ou <b>R$&nbsp;37,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/skin-adesiva-ps4-killzone-shadow-fall-2-p2891" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/skin-adesiva-ps4-killzone-shadow-fall-1-p2889">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1393350116-160x160-killzone_shadow1_1.jpg" border="0" alt="Skin Adesiva PS4 Killzone Shadow Fall - 1" title="Skin Adesiva PS4 Killzone Shadow Fall - 1" width="160" height="160"></div>
-
-										<b><div class="nome">Skin Adesiva PS4 Killzone Shadow Fall - 1</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;39,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;2,03</b>  no cartão ou <b>R$&nbsp;37,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/skin-adesiva-ps4-killzone-shadow-fall-1-p2889" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/skin-adesiva-ps4-infamous-second-son-2-p2888">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1393349900-160x160-infamous_second_son2_1.jpg" border="0" alt="Skin Adesiva PS4 Infamous Second Son - 2" title="Skin Adesiva PS4 Infamous Second Son - 2" width="160" height="160"></div>
-
-										<b><div class="nome">Skin Adesiva PS4 Infamous Second Son - 2</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;39,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;2,03</b>  no cartão ou <b>R$&nbsp;37,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/skin-adesiva-ps4-infamous-second-son-2-p2888" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/skin-adesiva-ps4-infamous-second-son-1-p2885">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1393349600-160x160-infamous_second_son1_1.jpg" border="0" alt="Skin Adesiva PS4 Infamous Second Son - 1" title="Skin Adesiva PS4 Infamous Second Son - 1" width="160" height="160"></div>
-
-										<b><div class="nome">Skin Adesiva PS4 Infamous Second Son - 1</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;39,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;2,03</b>  no cartão ou <b>R$&nbsp;37,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/skin-adesiva-ps4-infamous-second-son-1-p2885" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/skin-adesiva-ps4-battlefield-4-4-p2883">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1393349377-160x160-battlefield44_1.jpg" border="0" alt="Skin Adesiva PS4 Battlefield 4 - 4" title="Skin Adesiva PS4 Battlefield 4 - 4" width="160" height="160"></div>
-
-										<b><div class="nome">Skin Adesiva PS4 Battlefield 4 - 4</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;39,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;2,03</b>  no cartão ou <b>R$&nbsp;37,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/skin-adesiva-ps4-battlefield-4-4-p2883" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/skin-adesiva-ps4-battlefield-4-3-p2881">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1393349140-160x160-battlefield43_1.jpg" border="0" alt="Skin Adesiva PS4 Battlefield 4 - 3" title="Skin Adesiva PS4 Battlefield 4 - 3" width="160" height="160"></div>
-
-										<b><div class="nome">Skin Adesiva PS4 Battlefield 4 - 3</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;39,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;2,03</b>  no cartão ou <b>R$&nbsp;37,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/skin-adesiva-ps4-battlefield-4-3-p2881" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/skin-adesiva-ps4-battlefield-4-2-p2879">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1393348963-160x160-battlefield42_1.jpg" border="0" alt="Skin Adesiva PS4 Battlefield 4 - 2" title="Skin Adesiva PS4 Battlefield 4 - 2" width="160" height="160"></div>
-
-										<b><div class="nome">Skin Adesiva PS4 Battlefield 4 - 2</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;39,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;2,03</b>  no cartão ou <b>R$&nbsp;37,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/skin-adesiva-ps4-battlefield-4-2-p2879" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/skin-adesiva-ps4-battlefield-4-1-p2877">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1393348639-160x160-battlefield41_1.jpg" border="0" alt="Skin Adesiva PS4 Battlefield 4 - 1" title="Skin Adesiva PS4 Battlefield 4 - 1" width="160" height="160"></div>
-
-										<b><div class="nome">Skin Adesiva PS4 Battlefield 4 - 1</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;39,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;2,03</b>  no cartão ou <b>R$&nbsp;37,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/skin-adesiva-ps4-battlefield-4-1-p2877" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/skin-adesiva-ps4-atari-p2876">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1393348370-160x160-atari_1.jpg" border="0" alt="Skin Adesiva PS4 Atari" title="Skin Adesiva PS4 Atari" width="160" height="160"></div>
-
-										<b><div class="nome">Skin Adesiva PS4 Atari</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;39,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;2,03</b>  no cartão ou <b>R$&nbsp;37,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									<div class="marks"><img src="../img/lancamento.gif" border="0" alt="" width="114" height="39"></div>
-
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/skin-adesiva-ps4-atari-p2876" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/skin-adesiva-ps4-assassin_s-creed-black-flag-2-p2872">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1393347749-160x160-assassins_black_flag2_1.jpg" border="0" alt="Skin Adesiva PS4 Assassin´s Creed - Black Flag - 2" title="Skin Adesiva PS4 Assassin´s Creed - Black Flag - 2" width="160" height="160"></div>
-
-										<b><div class="nome">Skin Adesiva PS4 Assassin´s Creed - Black Flag - 2</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;39,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;2,03</b>  no cartão ou <b>R$&nbsp;37,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/skin-adesiva-ps4-assassin_s-creed-black-flag-2-p2872" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/skin-adesiva-ps4-assassin_s-creed-black-flag-1-p2871">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1393347431-160x160-assassins_black_flag1_1.jpg" border="0" alt="Skin Adesiva PS4 Assassin´s Creed - Black Flag - 1" title="Skin Adesiva PS4 Assassin´s Creed - Black Flag - 1" width="160" height="160"></div>
-
-										<b><div class="nome">Skin Adesiva PS4 Assassin´s Creed - Black Flag - 1</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;39,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;2,03</b>  no cartão ou <b>R$&nbsp;37,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/skin-adesiva-ps4-assassin_s-creed-black-flag-1-p2871" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/ps4-just-dance-2014-p2547">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1388150853-160x160-just_dance2014_ps4_1.jpg" border="0" alt="PS4 Just Dance 2014" title="PS4 Just Dance 2014" width="126" height="160"></div>
-
-										<b><div class="nome">PS4 Just Dance 2014</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;159,90</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;8,33</b>  no cartão ou <b>R$&nbsp;151,91</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									<div class="marks"><img src="../img/lancamento.gif" border="0" alt="" width="114" height="39"></div>
-
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/ps4-just-dance-2014-p2547" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/ps4-assassin_s-creed-iv-black-flag-p2542">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1387840246-160x160-assassins_creed4_black_flag_ps4_1.jpg" border="0" alt="PS4 Assassin´s Creed IV - Black Flag" title="PS4 Assassin´s Creed IV - Black Flag" width="126" height="160"></div>
-
-										<b><div class="nome">PS4 Assassin´s Creed IV - Black Flag</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;199,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;10,36</b>  no cartão ou <b>R$&nbsp;189,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									<div class="marks"><img src="../img/lancamento.gif" border="0" alt="" width="114" height="39"></div>
-
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/ps4-assassin_s-creed-iv-black-flag-p2542" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/ps4-killzone-shadow-fall-p2504">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1385990284-160x160-killzone_shadow_fall_ps4_1.jpg" border="0" alt="PS4 Killzone Shadow Fall" title="PS4 Killzone Shadow Fall" width="128" height="160"></div>
-
-										<b><div class="nome">PS4 Killzone Shadow Fall</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;179,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;9,32</b>  no cartão ou <b>R$&nbsp;170,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									<div class="marks"><img src="../img/lancamento.gif" border="0" alt="" width="114" height="39"></div>
-
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/ps4-killzone-shadow-fall-p2504" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-<li style="width: 24%; height: 351px; overflow: auto;">
-								<div class="item_box_produto">
-									<a href="http://localhost/ps4-controle-dualshock-4-preto-p2485">
-										<div class="imagem" style="height: 160px; overflow: auto;"><img src="../img/1385394936-160x160-dualshock4_preto_ps4_1.jpg" border="0" alt="PS4 Controle DualShock 4 Preto" title="PS4 Controle DualShock 4 Preto" width="160" height="101"></div>
-
-										<b><div class="nome">PS4 Controle DualShock 4 Preto</div>
-</b>
-										<small></small>
-									</a>
-									<div class="preco" style="float:none;margin:4px;">R$&nbsp;259,00</div>
-									<div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;13,49</b>  no cartão ou <b>R$&nbsp;246,05</b> à vista com <b>5%</b> desconto</span></div>
-
-									
-									
-									<div class="marks"><img src="../img/lancamento.gif" border="0" alt="" width="114" height="39"></div>
-
-									<div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
-
-									<a id="bt_mais_detalhes" style="display:block;" href="http://localhost/ps4-controle-dualshock-4-preto-p2485" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
-									
-								</div>
-							</li>
-					</ul>
+  
+                    <!--
+                        Início do php
+                    -->
+
+                                    <!--
+                                    Fim do php
+                                    -->
 					
 				</div>
 				
@@ -1509,60 +1091,36 @@ $(document).ready(function(){});
 <td><img src="../img/bg_rodape_newsletter.png" border="0" alt="" width="169" height="15"></td>
   </tr>
 </tbody></table>
-</td></tr><tr><td align="right" class="boxes_right"><table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="0">
-  <tbody><tr>
-<td><img src="../img/cabecalho_login.png" border="0" alt="" width="169" height="34"></td>
-  </tr>
-</tbody></table>
-<table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="4" style="background-image:url(/imagens/funshopnet.com.br/boxes/bg_meio.png);background-repeat:repeat-y;color:#000000;">
-  <tbody><tr>
-<td><table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="0">
-  <tbody><tr>
-    <td align="left" style="color:#000000;"><form id="check_login" name="check_login" method="POST" action="https://ecommerce2.iset.com.br/funshopnet.com.br/login.php?action=process&amp;sid=df90b5afc37d884f3be6ee568906c99e">Seu Email:<br><input autocomplete="off" type="text" name="login_email" id="login_email" class="campo_texto" maxlength="100" style="width:95%"><br>Senha de acesso:<br><input autocomplete="off" type="password" name="login_senha" id="login_senha" class="campo_texto" maxlength="30" style="width:95%"><br><input type="image" src="../img/bt_entrar.gif" border="0" alt="Login" title=" Login "><br><br>- <a style="color:#000000;" href="https://ecommerce2.iset.com.br/funshopnet.com.br/cadastro.php?sid=df90b5afc37d884f3be6ee568906c99e">Cadastre-se</a><br>- <a style="color:#000000;" href="https://ecommerce2.iset.com.br/funshopnet.com.br/recuperar_senha.php?sid=df90b5afc37d884f3be6ee568906c99e">Esqueceu a sua senha?</a></form></td>
-  </tr>
-</tbody></table>
-</td>
-  </tr>
-</tbody></table>
-<table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="0">
-  <tbody><tr>
-<td><img src="../img/bg_rodape.png" border="0" alt="" width="169" height="14"></td>
-  </tr>
-</tbody></table>
-</td></tr><tr><td align="right" class="boxes_right"><table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="0">
-  <tbody><tr>
-  </tr>
-</tbody></table>
-<table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="0" style="color:#000000;">
-  <tbody><tr>
-<td><table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="0">
-  <tbody><tr>
-  </tr>
-</tbody></table>
-</td>
-  </tr>
-</tbody></table>
-</td></tr><tr><td align="right" class="boxes_right"><table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="0">
-  <tbody><tr>
-  </tr>
-</tbody></table>
-<table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="0" style="color:#000;">
-  <tbody><tr>
-<td><table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="0">
-  <tbody><tr>
-    <td align="center"><img src="../img/bg_contato_telefone.gif" border="0" alt="" width="150" height="51"><br><b>(16) 3403-4100</b><br><b>(16) 3403-4101</b><br><b>(16) 3723-3268</b><br>das 9:30hs as 18:30hs</td>
-  </tr>
-  <tr>
-    <td align="center"><a href="callto:funshop.franca"><img src="../img/img_skype.gif" border="0" alt="" width="150" height="68"></a></td>
-  </tr>
-  <tr>
-    <td align="center"><a target="_blank" href="https://twitter.com/FunShopNet"><img src="../img/1330105354-155x218-twitter.jpg" border="0" alt="" width="155" height="218"></a></td>
-  </tr>
-</tbody></table>
-</td>
-  </tr>
-</tbody></table>
-</td></tr><tr><td align="right" class="boxes_right"></td></tr><tr><td align="right" class="boxes_right"></td></tr><tr><td align="right" class="boxes_right"><table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="0">
+</td></tr><?php if (!isset($_SESSION["nm_usuario"])) {?>
+                                                        <tr><td align="right" class="boxes_right"><table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                            <tbody><tr>
+                                                                    <td><img src="../img/cabecalho_login.png" border="0" alt="" width="169" height="34"></td>
+                                                                </tr>
+                                                            </tbody></table>
+                                                        <table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="4" style="background-image:url(../img/boxes/bg_meio.png);background-repeat:repeat-y;color:#000000;">
+                                                            <tbody><tr>
+                                                                    <td><table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                                            <tbody><tr>
+                                                                                    <td align="left" style="color:#000000;">
+                                                                                       
+                                                                                        <form id="check_login" name="check_login" method="POST" action="http://localhost/site-php-funshop/control/verifica_conta.php">
+                                                                                            <input autocomplete="off" type="hidden" name="sid" id="sid" class="campo_texto" size="50%" value="3557e3542a5f9b7bb1a5fdc0a391a270">Seu Email:<br><input autocomplete="off" type="text" name="login_email" id="login_email" class="campo_texto" maxlength="100" style="width:95%"><br>Senha de acesso:<br><input autocomplete="off" type="password" name="login_senha" id="login_senha" class="campo_texto" maxlength="30" style="width:95%"><br><input type="image" src="../img/bt_entrar.gif" border="0" alt="Login" title=" Login "><br><br>- <a style="color:#000000;" href="http://localhost/site-php-funshop/view/cadastro.php?sid=3557e3542a5f9b7bb1a5fdc0a391a270">Cadastre-se</a><br>- <a style="color:#000000;" href="http://localhost/site-php-funshop/view/recuperar_senha.php?sid=3557e3542a5f9b7bb1a5fdc0a391a270">Esqueceu a sua senha?</a>
+                                                                                        </form>
+                                                                                        
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody></table>
+                                                        <table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="0">
+                                                            <tbody><tr>
+                                                                    <td><img src="../img/bg_rodape.png" border="0" alt="" width="169" height="14"></td>
+                                                                </tr>
+                                                            </tbody></table>
+                                                    </td></tr>
+                                                        <?php }?><td align="right" class="boxes_right"></td></tr><tr><td align="right" class="boxes_right"></td></tr><tr><td align="right" class="boxes_right"><table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="0">
   <tbody><tr>
 <td><img src="../img/cabecalho_promocoes.png" border="0" alt="" width="169" height="34"></td>
   </tr>
