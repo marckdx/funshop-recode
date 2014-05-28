@@ -439,7 +439,7 @@ node-15" class="last"><a href="http://www.funshopnet.com.br/xbox-
 one-m310"><span>Xbox One</span></a></li></ul>      </div>         </td>
 </tr> </tbody></table> <!-- FIM menu horizontal de categorias //--> <form
 id="barra_quick_find" name="barra_quick_find" method="GET"
-action="busca_avancada.php">   <table
+action="busca.php">   <table
 width="100%" border="0" cellspacing="0" cellpadding="0" style="" height="40"
 background="../img/bg_barra_busca.gif">         <tbody><tr>             <td
 width="99%">             <table width="1" border="0" align="right"
@@ -552,9 +552,7 @@ value="319">&nbsp;•&nbsp;&nbsp;•&nbsp;Skin Controle</option></select></td>
 <td width="1%" style="padding-left:5px;"><input type="image" src="../img/bt_ok.gif" border="0"
 alt="Busca Rápida" title=" Busca Rápida "></td>                     <td
 width="1%" style="padding-left:5px;"><a
-href="busca.php"><img src="../img/bt_busca_avancada.gif"
-border="0" alt="Busca avançada" title="Busca avançada" width="100"
-height="22"></a></td>                 </tr>             </tbody></table>
+href="busca.php"></a></td>                 </tr>             </tbody></table>
 </td>         </tr>     </tbody></table>     </form> <table border="0"
 cellpadding="0" cellspacing="0" width="100%" style="" class="corpo">
 <tbody><tr>     <td class="corpo_conteudo">       <table border="0"
