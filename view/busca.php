@@ -985,12 +985,15 @@ require_once '../control/conexao.class.php';
                                                             <tbody><tr>
                                                                     <td width="40%">Resultado de Busca</td>
                                                                     <td width="60%" align="right" style="font-size:11px;">
-                                                                        <form method="get" action="busca.php?keywords=<?php echo $busca; ?>">
-                                                                            Nome do Produto<input  type="radio" name="orderby" value="1" />
-                                                                            Preço (menor - maior)<input type="radio" name="orderby" value="2" />
-                                                                            Preço (maior - menor)<input type="radio" name="orderby" value="3" />
+                                                                        <form method="get" action="busca.php?keywords=<?php echo $_SESSION['keywords']; ?>">
+                                                                            <select name="orderby">
+                                                                                <option value="1">Nome do Produto</option>
+                                                                                <option value="2">Preço (menor - maior)</option>
+                                                                                <option value="3">Preço (maior - menor)</option>
+                                                                            </select>
                                                                             <input type="submit" value="Ordenar" />
                                                                             <input type="hidden" name='keywords' value="<?php echo $_SESSION['keywords'] ?>" />
+                                                                            
                                                                         </form>
                                                                         <script>if (jQuery().select2) $('select[name="sort"]').select2().select2("val", ["lancamento"]);</script>
                                                                         <input type="hidden" name="keywords" value="<?php echo $_SESSION['keywords']; ?>"
@@ -1015,7 +1018,8 @@ require_once '../control/conexao.class.php';
                                                             } else {
                                                                 $con = new conexao();
                                                                 $_SESSION['keywords'] = $_REQUEST['keywords'];
-                                                                if(isset($_REQUEST['orderby'])){
+                                                                $orderby =$_REQUEST['orderby'];
+                                                                if($orderby){
                                                                 switch ($_REQUEST['orderby']) {
                                                                     case 1 :
                                                                         $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(nm_produto)");

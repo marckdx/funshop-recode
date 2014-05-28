@@ -818,7 +818,7 @@ $(document).ready(function(){});
                       <ul id="product_gallery" class="etalage" style="display: block; width: 362px; height: 486px;">
                       <li class="etalage_thumb etalage_thumb_active thumb_1" style="display: list-item; background-image: none;">
                         <a rel="gallery" href="../img/facebreaker_ps3_1.jpg" title="<?php $row["nm_produto"]; ?>">
-                         <img src="../img/1301930654-250x289-facebreaker_ps3_1.jpg" border="0" title="<?php $row["nm_produto"]; ?>" height="340" tabindex="0" class="etalage_thumb_image" style="display: inline;">                         <img data-width="250" data-height="289" class="etalage_source_image" title="PS3 FaceBreaker" src="../img/facebreaker_ps3_1.jpg">
+                         <img src="<?php echo $row["ds_link_produto"]; ?>" border="0" title="<?php $row["nm_produto"]; ?>" height="340" tabindex="0" class="etalage_thumb_image" style="display: inline;">                         <img data-width="250" data-height="289" class="etalage_source_image" title="PS3 FaceBreaker" src="../img/facebreaker_ps3_1.jpg">
                         </a> 
                       </li>    			
                       </ul>
