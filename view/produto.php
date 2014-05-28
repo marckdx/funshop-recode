@@ -482,7 +482,7 @@ $(document).ready(function(){});
                                         if (isset($_SESSION["nm_usuario"])) {
                                             echo $_SESSION["nm_usuario"] . ", clique para <a href='sair.php' style='text-decoration:underline;color:#000000;'>sair</a>";
                                         } else {
-                                            echo ", faça o seu <a href='login.php' style='text-decoration:underline;color:#000000;'>login</a> ou clique aqui para se <a href='novaconta.php' style='text-decoration:underline;color:#000000;'>cadastrar</a>";
+                                            echo ", faça o seu <a href='login.php' style='text-decoration:underline;color:#000000;'>login</a>";
                                         }
                                         ?> .</td>
                                     <td width="50%" height="26">

@@ -454,7 +454,7 @@ require_once '../control/conexao.class.php';
                                         if (isset($_SESSION["nm_usuario"])) {
                                             echo $_SESSION["nm_usuario"] . ", clique para <a href='sair.php' style='text-decoration:underline;color:#000000;'>sair</a>";
                                         } else {
-                                            echo ", faça o seu <a href='http://localhost/site-php-funshop/view/login.php' style='text-decoration:underline;color:#000000;'>login</a> ou clique aqui para se <a href='http://localhost/site-php-funshop/view/novaconta.php' style='text-decoration:underline;color:#000000;'>cadastrar</a>";
+                                            echo ", faça o seu <a href='login.php' style='text-decoration:underline;color:#000000;'>login</a>";
                                         }
                                         ?>
                                     </td>
@@ -477,7 +477,7 @@ require_once '../control/conexao.class.php';
             <tbody><tr>
                     <td>
                         <div id="menu_categoria">
-                            <ul><li id="categ-node-1" class="first"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=ds"><span>3DS e DS</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-2"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=action-figures"><span>Action Figures</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-3"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=geek"><span>Geek</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-4"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=pc"><span>PC</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-5"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=pelucias"><span>Pelúcias</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-6"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=ps-vita"><span>PS Vita</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-7"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=ps2"><span>PS2</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-8"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=ps3"><span>PS3</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-9"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=ps4"><span>PS4</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-10"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=psp-m228"><span>PSP</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-11"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=veiculos-miniatura-m290"><span>Veículos Miniatura</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-12"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=wii-m202"><span>Wii</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-13"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=wii-u-m304"><span>Wii U</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-14"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=xbox-360"><span>Xbox 360</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-15" class="last"><a href="http://localhost/site-php-funshop/view/busca.php?keywords=xbox-one"><span>Xbox One</span></a></li></ul>      </div>
+                            <ul><li id="categ-node-1" class="first"><a href="busca.php?keywords=ds"><span>3DS e DS</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-2"><a href="busca.php?keywords=action-figures"><span>Action Figures</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-3"><a href="busca.php?keywords=geek"><span>Geek</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-4"><a href="busca.php?keywords=pc"><span>PC</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-5"><a href="busca.php?keywords=pelucias"><span>Pelúcias</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-6"><a href="busca.php?keywords=ps-vita"><span>PS Vita</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-7"><a href="busca.php?keywords=ps2"><span>PS2</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-8"><a href="busca.php?keywords=ps3"><span>PS3</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-9"><a href="busca.php?keywords=ps4"><span>PS4</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-10"><a href="busca.php?keywords=psp-m228"><span>PSP</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-11"><a href="busca.php?keywords=veiculos-miniatura-m290"><span>Veículos Miniatura</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-12"><a href="busca.php?keywords=wii-m202"><span>Wii</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-13"><a href="busca.php?keywords=wii-u-m304"><span>Wii U</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-14"><a href="busca.php?keywords=xbox-360"><span>Xbox 360</span></a></li><li class="divisoria"><span></span></li><li id="categ-node-15" class="last"><a href="busca.php?keywords=xbox-one"><span>Xbox One</span></a></li></ul>      </div>
                     </td>
                 </tr>
             </tbody></table>
@@ -1001,7 +1001,7 @@ require_once '../control/conexao.class.php';
                                                                 Início do php
                                                             -->
                                                             <?php
-                                                            if ($_SERVER["REQUEST_METHOD"] != 'POST' || $_REQUEST['keywords'] == "" || isset($_SESSION['keywords'])) {
+                                                            if ($_SERVER["REQUEST_METHOD"] != 'POST' || $_REQUEST['keywords'] == "" || !isset($_SESSION['keywords'])) {
                                                                 echo "Não há busca";
                                                             } else {
                                                                 $con = new conexao();
@@ -1022,12 +1022,9 @@ require_once '../control/conexao.class.php';
                                                                         while ($valor = mysql_fetch_array($result)) {
                                                                             ?>
 
-
-
-
                                                                             <li style="width: 24%; height: 351px; overflow: auto;">
                                                                                 <div class="item_box_produto">
-                                                                                    <a href="http://localhost/site-php-funshop/view/produto.php?id=<?php echo $valor['cd_produto']; ?>">
+                                                                                    <a href="produto.php?id=<?php echo $valor['cd_produto']; ?>">
                                                                                         <div class="imagem" style="height: 160px; overflow: auto;"><img src="<?php echo $valor['ds_link_produto'] ?>" border="0" alt="Headset Sony Gold 7.1 Wireless PS4/PS3/PS Vita" title="Headset Sony Gold 7.1 Wireless PS4/PS3/PS Vita" width="160" height="160"></div>
 
                                                                                         <b><div class="nome"><?php echo $valor['nm_produto']; ?></div>
@@ -1044,7 +1041,7 @@ require_once '../control/conexao.class.php';
                                                                                     <?php }?>
                                                                                     <div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
 
-                                                                                    <a id="bt_mais_detalhes" style="display:block;" href="http://localhost/site-php-funshop/view/produto.php?id=<?php echo $valor['cd_produto']; ?>" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
+                                                                                    <a id="bt_mais_detalhes" style="display:block;" href="produto.php?id=<?php echo $valor['cd_produto']; ?>" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
 
                                                                                 </div>
                                                                                 <?php
