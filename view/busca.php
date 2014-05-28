@@ -985,7 +985,7 @@ require_once '../control/conexao.class.php';
                                                             <tbody><tr>
                                                                     <td width="40%">Resultado de Busca</td>
                                                                     <td width="60%" align="right" style="font-size:11px;">
-                                                                        <form method="get" action="">
+                                                                        <form method="get" action="busca.php?keywords=<?php echo $busca; ?>">
                                                                             Nome do Produto<input  type="radio" name="orderby" value="1" />
                                                                             Preço (menor - maior)<input type="radio" name="orderby" value="2" />
                                                                             Preço (maior - menor)<input type="radio" name="orderby" value="3" />
@@ -1015,7 +1015,8 @@ require_once '../control/conexao.class.php';
                                                             } else {
                                                                 $con = new conexao();
                                                                 $_SESSION['keywords'] = $_REQUEST['keywords'];
-                                                                switch ($_SESSION['orderby']) {
+                                                                if(isset($_REQUEST['orderby'])){
+                                                                switch ($_REQUEST['orderby']) {
                                                                     case 1 :
                                                                         $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(nm_produto)");
                                                                     case 2:
@@ -1024,6 +1025,9 @@ require_once '../control/conexao.class.php';
                                                                         $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(vl_produto) DESC");
                                                                     default :
                                                                         $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%'");
+                                                                }
+                                                                }else{
+                                                                    $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%'");
                                                                 }
                                                                 ?>
                                                                 <tbody><tr>
