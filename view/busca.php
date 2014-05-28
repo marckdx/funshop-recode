@@ -1012,29 +1012,27 @@ require_once '../control/conexao.class.php';
                                                             -->
 <?php
 
-if (!isset($_GET['keywords']) || !isset($_SESSION['keywords'])) {
-    echo "Não há busca";
-   $_SESSION['keywords'] = "hwfsasa";
-} else {
+if (!isset($_SESSION['keywords'])) {
+   $_SESSION['keywords'] = "qweggwg3qg3g";
+} 
     $con = new conexao();
     
-if ($_SESSION['keywords']=="") {
-            $_SESSION['keywords'] = "awegfqwe";
-   }else{
-       $_SESSION['keywords'] = $_GET['keywords'];
-       
-   }
+if (!isset($_GET['keywords'])) {
+    $_GET['keywords']=$_SESSION['keywords'];
+}else if ($_GET['keywords']==""){
+    $_SESSION['keywords'] = "safwewqfeqwegf";
+}else{
+   $_SESSION['keywords'] = $_GET['keywords'];
+}
 
     if (isset($_GET['orderby'])) {
         if ($_GET['orderby'] == "1") {
             $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(nm_produto)");
         } elseif ($_GET['orderby'] == "2") {
             $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(vl_produto)");
-        } elseif ($_GET['orderby'] == "3") {
-            $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(vl_produto) DESC");
         } else {
-            echo "Não há busca";
-        }
+            $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(vl_produto) DESC");
+        } 
     } else {
         $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%'");
     }
@@ -1052,7 +1050,7 @@ if ($_SESSION['keywords']=="") {
 
                                     <tbody><tr>
                                             <td>Mostrando <b><?php echo mysql_num_rows($result); ?></b> para <b></b> (de <b><?php echo mysql_num_rows($result); ?></b> registros)</td>
-                                            <td align="right">&nbsp;<span class="pagina_atual"><b>1</b></span>&nbsp;&nbsp;&nbsp;</td>
+                                            <td align="right"></td>
                                         </tr>
                                     </tbody></table>
                                 <img src="../img/pixel_trans.gif" border="0" alt="" width="100%" height="10">
@@ -1101,10 +1099,6 @@ if ($_SESSION['keywords']=="") {
                                                 <tbody><tr>
                                                         <td>Mostrando <b><?php echo mysql_num_rows($result); ?></b> para <b></b> (de <b><?php echo mysql_num_rows($result); ?></b> registros)</td>
                                                         <td align="right">&nbsp;<span class="pagina_atual"><b>1</b></span>&nbsp;&nbsp;&nbsp;</td>
-
-                                                        <?php
-                                                    }
-                                                    ?>  
 
                                                     <!--
                                                     Fim do php

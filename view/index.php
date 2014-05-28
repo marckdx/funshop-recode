@@ -567,7 +567,7 @@ width="100%" cellspacing="0" cellpadding="4" style="background-
 image:url(../img/bg_meio.png);background-
 repeat:repeat-y;color:#000000;">   <tbody><tr> <td><table class="texto11"
 border="0" width="100%" cellspacing="0" cellpadding="0">   <tbody><tr>     <td
-align="center"><form id="quick_find" name="quick_find" method="POST"
+align="center"><form id="quick_find" name="quick_find" method="get"
 action="produto.php"><table
 border="0" cellspacing="2" cellpadding="0" class="texto11">   <tbody><tr>
 <td width="80%"><input autocomplete="off" type="text" name="keywords"
