@@ -983,11 +983,18 @@ require_once '../control/conexao.class.php';
                                                     <td class="texto_cabecalho_pagina">
                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                             <tbody><tr>
-                                                                    <td width="60%">Resultado de Busca</td>
-                                                                    <td width="40%" align="right" style="font-size:11px;">Ordenar por:
-                                                                        <form id="frmorder" name="frmorder" method="POST" action=""><select type="select" name="sort" id="sort" onchange="document.getElementById('frmorder').submit();"><option value="sort_order">- Selecione -</option><option value="nome">Nome do produto</option><option value="preco_maior_menor">Preço (maior - menor)</option><option value="preco_menor_maior">Preço (menor - maior)</option></select><script>if (jQuery().select2) $('select[name="sort"]').select2().select2("val", ["lancamento"]);</script>
-                                                                            <input type="hidden" name="keywords" value="<?php echo $_SESSION['keywords'];?>"
+                                                                    <td width="40%">Resultado de Busca</td>
+                                                                    <td width="60%" align="right" style="font-size:11px;">
+                                                                        <form method="get" action="">
+                                                                            Nome do Produto<input  type="radio" name="orderby" value="1" />
+                                                                            Preço (menor - maior)<input type="radio" name="orderby" value="2" />
+                                                                            Preço (maior - menor)<input type="radio" name="orderby" value="3" />
+                                                                            <input type="submit" value="Ordenar" />
+                                                                            <input type="hidden" name='keywords' value="<?php echo $_SESSION['keywords'] ?>" />
                                                                         </form>
+                                                                        <script>if (jQuery().select2) $('select[name="sort"]').select2().select2("val", ["lancamento"]);</script>
+                                                                        <input type="hidden" name="keywords" value="<?php echo $_SESSION['keywords']; ?>"
+                                                                               </form>
                                                                     </td>
                                                                 </tr>
                                                             </tbody></table>											  
@@ -1003,12 +1010,21 @@ require_once '../control/conexao.class.php';
                                                                 Início do php
                                                             -->
                                                             <?php
-                                                            if ($_SERVER["REQUEST_METHOD"] != 'POST' || $_REQUEST['keywords'] == "" || !isset($_SESSION['keywords'])) {
+                                                            if (!$_SERVER["REQUEST_METHOD"] == 'POST' || !$_SERVER["REQUEST_METHOD"] == 'GET' || $_REQUEST['keywords'] == "") {
                                                                 echo "Não há busca";
                                                             } else {
                                                                 $con = new conexao();
-                                                                $_SESSION['keywords']=$_REQUEST['keywords'];
-                                                                $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%'");
+                                                                $_SESSION['keywords'] = $_REQUEST['keywords'];
+                                                                switch ($_SESSION['orderby']) {
+                                                                    case 1 :
+                                                                        $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(nm_produto)");
+                                                                    case 2:
+                                                                        $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(vl_produto)");
+                                                                    case 3:
+                                                                        $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(vl_produto) DESC");
+                                                                    default :
+                                                                        $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%'");
+                                                                }
                                                                 ?>
                                                                 <tbody><tr>
                                                                         <td>Mostrando <b><?php echo mysql_num_rows($result); ?></b> para <b></b> (de <b><?php echo mysql_num_rows($result); ?></b> registros)</td>
@@ -1036,11 +1052,11 @@ require_once '../control/conexao.class.php';
                                                                                     <div class="preco" style="float:none;margin:4px;">R$&nbsp;<?php echo $valor['vl_produto']; ?></div>
                                                                                     <div class="pagto"><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;<?php echo round($valor['vl_produto'] / 24, 2); ?></b>  no cartão ou <b>R$&nbsp;<?php echo round($valor['vl_produto'] * 0.95, 2); ?></b> à vista com <b>5%</b> desconto</span></div>
 
-                                                                                    <?php if($valor['st_produto']==1){?>
-                                                                                    <div class="marks"><img src="../img/lancamento.gif" border="0" alt="" width="114" height="39"></div>
-                                                                                    <?php }else if($valor['st_produto']==2){?>
-                                                                                    <div class="marks"><img src="../img/lancamento.gif" border="0" alt="" width="114" height="39"></div>
-                                                                                    <?php }?>
+                                                                                    <?php if ($valor['st_produto'] == 1) { ?>
+                                                                                        <div class="marks"><img src="../img/lancamento.gif" border="0" alt="" width="114" height="39"></div>
+                                                                                    <?php } else if ($valor['st_produto'] == 2) { ?>
+                                                                                        <div class="marks"><img src="../img/lancamento.gif" border="0" alt="" width="114" height="39"></div>
+                                                                                    <?php } ?>
                                                                                     <div class="avaliacao"><img src="../img/stars_0.png" border="0" alt="" width="83" height="15"></div>
 
                                                                                     <a id="bt_mais_detalhes" style="display:block;" href="produto.php?id=<?php echo $valor['cd_produto']; ?>" title="Mais detalhes"><img src="../img/icone_detalhes.png" border="0" alt="Mais detalhes" title="Mais detalhes" width="62" height="21"></a>
@@ -1403,14 +1419,14 @@ require_once '../control/conexao.class.php';
     </tbody>
 </table><script type="text/javascript">
 
-                                                                                                var _gaq = _gaq || [];
-                                                                                                _gaq.push(['_setAccount', 'UA-3710200-3']);
-                                                                                                _gaq.push(['_trackPageview']);
-                                                                                                (function() {
-                                                                                                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                                                                                                        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                                                                                                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-                                                                                                })();
+                                                                                var _gaq = _gaq || [];
+                                                                                _gaq.push(['_setAccount', 'UA-3710200-3']);
+                                                                                _gaq.push(['_trackPageview']);
+                                                                                (function() {
+                                                                                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                                                                                        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                                                                                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                                                                                })();
 
 </script> 
 <table cellpadding="0" cellspacing="0" align="center" border="0" width="100%" style="position:relative;clear:both;margin-top:0px;z-index:2147483647 !important" bgcolor="#FFFFFF">
