@@ -28,14 +28,6 @@ class conexao {
         mysql_select_db($this->banco);        
     }
 
-    public static function doSelect($sql) {
-        return mysql_query($sql) or die(mysql_error());
-    }
-
-    public function doInsert($sql) {
-        mysql_query($sql) or die(mysql_error());
-    }
-
     public function closeCon() {
         if ($this->con != null) {
             $this->destroy();
