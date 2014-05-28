@@ -1020,14 +1020,13 @@ require_once '../control/conexao.class.php';
                                                                 $_SESSION['keywords'] = $_REQUEST['keywords'];
                                                                 $orderby =$_REQUEST['orderby'];
                                                                 if($orderby){
-                                                                switch ($_REQUEST['orderby']) {
-                                                                    case 1 :
+                                                                if($_REQUEST['orderby']=="1") {
                                                                         $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(nm_produto)");
-                                                                    case 2:
+                                                                }elseif ($_REQUEST['orderby']=="2") {
                                                                         $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(vl_produto)");
-                                                                    case 3:
+                                                                }elseif ($_REQUEST['orderby']=="3") {
                                                                         $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(vl_produto) DESC");
-                                                                    default :
+                                                                }else {
                                                                         $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%'");
                                                                 }
                                                                 }else{
