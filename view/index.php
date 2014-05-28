@@ -1140,7 +1140,7 @@ alt="MercadoPago"></span></td>   </tr> </tbody></table> </td>   </tr>
                                                                                                node-15" class="last"><a href="http://localhost/site-php-funshop/view/produto.php?xbox-
                                                   one-m310"><span>Xbox One</span></a></li></ul>      </div>         </td>
                 </tr> </tbody></table> <!-- FIM menu horizontal de categorias //--> <form
-            id="barra_quick_find" name="barra_quick_find" method="POST"
+            id="barra_quick_find" name="barra_quick_find" method="get"
             action="busca.php">   <table
                 width="100%" border="0" cellspacing="0" cellpadding="0" style="" height="40"
                 background="../img/bg_barra_busca.gif">         <tbody><tr>             <td
@@ -1170,7 +1170,7 @@ alt="MercadoPago"></span></td>   </tr> </tbody></table> </td>   </tr>
                                                                                                           image:url(../img/bg_meio.png);background-
                                                                                                           repeat:repeat-y;color:#000000;">   <tbody><tr> <td><table class="texto11"
                                                                                     border="0" width="100%" cellspacing="0" cellpadding="0">   <tbody><tr>     <td
-                                                                                        align="center"><form id="quick_find" name="quick_find" method="POST"
+                                                                                        align="center"><form id="quick_find" name="quick_find" method="get"
                                                                                                          action="busca.php"><table
                                                                                                 border="0" cellspacing="2" cellpadding="0" class="texto11">   <tbody><tr>
                                                                                                         <td width="80%"><input autocomplete="off" type="text" name="keywords"

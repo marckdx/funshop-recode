@@ -520,7 +520,7 @@ $(document).ready(function(){});
 	</tr>
 </tbody></table>
 <!-- FIM menu horizontal de categorias //-->
-<form id="barra_quick_find" name="barra_quick_find" method="POST" action="http://www.funshopnet.com.br/busca_avancada_resultado.php">	<table width="100%" border="0" cellspacing="0" cellpadding="0" style="" height="40" background="../img/bg_barra_busca.gif">
+<form id="barra_quick_find" name="barra_quick_find" method="get" action="http://www.funshopnet.com.br/busca_avancada_resultado.php">	<table width="100%" border="0" cellspacing="0" cellpadding="0" style="" height="40" background="../img/bg_barra_busca.gif">
 		<tbody><tr>
 			<td width="99%">
 			<table width="1" border="0" align="right" cellpadding="0" cellspacing="4">
@@ -616,7 +616,7 @@ $(document).ready(function(){});
   <tbody><tr>
 <td><table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="0">
   <tbody><tr>
-    <td align="center"><form id="quick_find" name="quick_find" method="POST" action="http://www.funshopnet.com.br/busca_avancada_resultado.php"><table border="0" cellspacing="2" cellpadding="0" class="texto11">
+    <td align="center"><form id="quick_find" name="quick_find" method="get" action="http://www.funshopnet.com.br/busca_avancada_resultado.php"><table border="0" cellspacing="2" cellpadding="0" class="texto11">
   <tbody><tr>
     <td width="80%"><input autocomplete="off" type="text" name="keywords" id="keywords" class="campo_texto" maxlength="25" style="width:90%;"></td>
     <td width="20%"><input type="image" src="../img/bt_ok.gif" border="0" alt=""></td>

@@ -522,7 +522,7 @@ require_once '../control/conexao.class.php';
                                                             <tbody><tr>
                                                                     <td><table class="texto11" border="0" width="100%" cellspacing="0" cellpadding="0">
                                                                             <tbody><tr>
-                                                                                    <td align="center"><form id="quick_find" name="quick_find" method="POST" action="busca.php"><table border="0" cellspacing="2" cellpadding="0" class="texto11">
+                                                                                    <td align="center"><form id="quick_find" name="quick_find" method="get" action="busca.php"><table border="0" cellspacing="2" cellpadding="0" class="texto11">
                                                                                                 <tbody><tr>
                                                                                                         <td width="80%"><input autocomplete="off" type="text" name="keywords" id="keywords" class="campo_texto" maxlength="25" style="width:90%;"></td>
                                                                                                         <td width="20%"><input type="image" src="../img/bt_ok.gif" border="0" alt=""></td>
@@ -985,16 +985,14 @@ require_once '../control/conexao.class.php';
                                                             <tbody><tr>
                                                                     <td width="40%">Resultado de Busca</td>
                                                                     <td width="60%" align="right" style="font-size:11px;">
-                                                                        <form method="get" action="busca.php?keywords=<?php echo $_SESSION['keywords']; ?>">
-                                                                            <select name="orderby">
-                                                                                <option value="1">Nome do Produto</option>
-                                                                                <option value="2">Preço (menor - maior)</option>
-                                                                                <option value="3">Preço (maior - menor)</option>
-                                                                            </select>
-                                                                            <input type="submit" value="Ordenar" />
-                                                                            <input type="hidden" name='keywords' value="<?php echo $_SESSION['keywords'] ?>" />
-                                                                            
-                                                                        </form>
+<form method="get" action="busca.php?keywords=<?php echo $_SESSION['keywords']; ?>">
+    <select name="orderby">
+        <option value="1">Nome do Produto</option>
+        <option value="2">Preço (menor - maior)</option>
+        <option value="3">Preço (maior - menor)</option>
+    </select>
+    <input type="submit" value="Ordenar" />
+</form>
                                                                         <script>if (jQuery().select2) $('select[name="sort"]').select2().select2("val", ["lancamento"]);</script>
                                                                         <input type="hidden" name="keywords" value="<?php echo $_SESSION['keywords']; ?>"
                                                                                </form>
@@ -1012,40 +1010,55 @@ require_once '../control/conexao.class.php';
                                                             <!--
                                                                 Início do php
                                                             -->
-                                                            <?php
-                                                            if (!$_SERVER["REQUEST_METHOD"] == 'POST' || !$_SERVER["REQUEST_METHOD"] == 'GET' || $_REQUEST['keywords'] == "") {
-                                                                echo "Não há busca";
-                                                            } else {
-                                                                $con = new conexao();
-                                                                $_SESSION['keywords'] = $_REQUEST['keywords'];
-                                                                $orderby =$_REQUEST['orderby'];
-                                                                if($orderby){
-                                                                if($_REQUEST['orderby']=="1") {
-                                                                        $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(nm_produto)");
-                                                                }elseif ($_REQUEST['orderby']=="2") {
-                                                                        $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(vl_produto)");
-                                                                }elseif ($_REQUEST['orderby']=="3") {
-                                                                        $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(vl_produto) DESC");
-                                                                }else {
-                                                                        $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%'");
-                                                                }
-                                                                }else{
-                                                                    $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%'");
-                                                                }
-                                                                ?>
-                                                                <tbody><tr>
-                                                                        <td>Mostrando <b><?php echo mysql_num_rows($result); ?></b> para <b></b> (de <b><?php echo mysql_num_rows($result); ?></b> registros)</td>
-                                                                        <td align="right">&nbsp;<span class="pagina_atual"><b>1</b></span>&nbsp;&nbsp;&nbsp;</td>
-                                                                    </tr>
-                                                                </tbody></table>
-                                                            <img src="../img/pixel_trans.gif" border="0" alt="" width="100%" height="10">
-                                                            <div class="box_template">
-                                                                <div class="content" style="color:#000000;background:none;border-bottom:1px dotted #cccccc;" data-itens="4">
-                                                                    <ul class="content-itens">
-                                                                        <?php
-                                                                        $cont = 1;
-                                                                        while ($valor = mysql_fetch_array($result)) {
-                                                                            ?>
+<?php
+if (!isset($_SESSION['keywords'])) {
+    echo "Não há busca";
+    $_SESSION['keywords'] = $_GET['keywords'];
+} else {
+    $con = new conexao();
+    
+//    if (!isset($_SESSION['keywords'])) {
+            $_SESSION['keywords'] = $_GET['keywords'];
+//    }
+
+    if (isset($_GET['orderby'])) {
+        if ($_GET['orderby'] == "1") {
+            $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(nm_produto)");
+        } elseif ($_GET['orderby'] == "2") {
+            $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(vl_produto)");
+        } elseif ($_GET['orderby'] == "3") {
+            $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%' ORDER BY(vl_produto) DESC");
+        } else {
+            echo "Não há busca";
+        }
+    } else {
+        $result = mysql_query("SELECT * FROM tb_produto WHERE nm_produto LIKE '%" . $_SESSION['keywords'] . "%' OR ds_produto LIKE'%" . $_SESSION['keywords'] . "%'");
+    }
+//                                                                
+    ?>
+                                    <tbody><tr>
+                                            <td>Mostrando <b><?php echo mysql_num_rows($result); ?></b> para <b></b> (de <b><?php echo mysql_num_rows($result); ?></b> registros)</td>
+                                            <td align="right">&nbsp;<span class="pagina_atual"><b>1</b></span>&nbsp;&nbsp;&nbsp;</td>
+                                        </tr>
+                                    </tbody></table>
+                                <img src="../img/pixel_trans.gif" border="0" alt="" width="100%" height="10">
+                                <div class="box_template">
+                                    <div class="content" style="color:#000000;background:none;border-bottom:1px dotted #cccccc;" data-itens="4">
+                                        <ul class="content-itens">
+
+                                    <tbody><tr>
+                                            <td>Mostrando <b><?php echo mysql_num_rows($result); ?></b> para <b></b> (de <b><?php echo mysql_num_rows($result); ?></b> registros)</td>
+                                            <td align="right">&nbsp;<span class="pagina_atual"><b>1</b></span>&nbsp;&nbsp;&nbsp;</td>
+                                        </tr>
+                                    </tbody></table>
+                                <img src="../img/pixel_trans.gif" border="0" alt="" width="100%" height="10">
+                                <div class="box_template">
+                                    <div class="content" style="color:#000000;background:none;border-bottom:1px dotted #cccccc;" data-itens="4">
+                                        <ul class="content-itens">
+<?php
+    $cont = 1;
+    while ($valor = mysql_fetch_array($result)) {
+?>
 
                                                                             <li style="width: 24%; height: 351px; overflow: auto;">
                                                                                 <div class="item_box_produto">
@@ -1082,18 +1095,12 @@ require_once '../control/conexao.class.php';
 
                                                             </div> 
                                                 <tbody><tr>
-                                                        <td>Mostrando <b>1</b> para <b><?php echo mysql_num_rows($result); ?></b> (de <b><?php echo mysql_num_rows($result); ?></b> registros)</td>
+                                                        <td>Mostrando <b><?php echo mysql_num_rows($result); ?></b> para <b></b> (de <b><?php echo mysql_num_rows($result); ?></b> registros)</td>
                                                         <td align="right">&nbsp;<span class="pagina_atual"><b>1</b></span>&nbsp;&nbsp;&nbsp;</td>
 
                                                         <?php
                                                     }
                                                     ?>  
-
-
-
-
-
-
 
                                                     <!--
                                                     Fim do php
