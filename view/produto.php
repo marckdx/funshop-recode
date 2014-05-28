@@ -794,7 +794,7 @@ $(document).ready(function(){});
   </tr>
 </tbody></table>
 </td></tr></tbody></table>
-</td><?php $sql = mysql_query("SELECT nm_produto FROM tb_produto WHERE cd_produto = " . _REQUEST['id']); ?>
+</td><?php $sql = mysql_query("SELECT nm_produto FROM tb_produto WHERE cd_produto = " . $_REQUEST['id']); ?>
                     <td valign="top" bgcolor="#ffffff" class="coluna_centro">
                         <div class="texto_cabecalho_pagina"><h1><?php echo $sql; ?></h1></div>
 					<form id="detalhe_produto" name="detalhe_produto" method="post" action="http://www.funshopnet.com.br/produto_info.php?action=add_product&id_produto=394" onsubmit="return CheckProductForm(394,this,false);">          <table cellpadding="0" cellspacing="0" border="0" width="100%">
