@@ -551,8 +551,11 @@ value="319">&nbsp;•&nbsp;&nbsp;•&nbsp;Skin Controle</option></select></td>
 alt="Busca Rápida" title=" Busca Rápida "></td>                     <td
 width="1%" style="padding-left:5px;"><a
 <<<<<<< HEAD
+<<<<<<< HEAD
 href="busca.php"></a></td>                 </tr>             </tbody></table>
 =======
+=======
+>>>>>>> origin/master
 href="produto.php"><img src="../img/bt_busca_avancada.gif"
 border="0" alt="Busca avançada" title="Busca avançada" width="100"
 height="22"></a></td>                 </tr>             </tbody></table>
