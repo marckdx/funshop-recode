@@ -4,6 +4,15 @@ require_once '../control/utilidades.class.php';
 $con = mysql_connect('localhost', 'root', 'root') or
     die('Não foi possível conectar: ' . mysql_error());
 mysql_select_db('bd_funshop');
+
+
+$result = mysql_query("SELECT nm_produto, ds_produto, ds_link_produto, vl_produto, pc_desconto_produto, ds_garantia_produto FROM tb_produto WHERE cd_produto = " . filter_input(INPUT_GET, 'id'));
+if(mysql_num_rows($result) == 0){
+    header("Location: index.php");
+}
+while($row = mysql_fetch_array($result))
+{
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -796,15 +805,7 @@ $(document).ready(function(){});
   </tr>
 </tbody></table>
 </td></tr></tbody></table>
-</td><?php 
-
-$result = mysql_query("SELECT nm_produto, ds_produto, ds_link_produto, vl_produto, pc_desconto_produto, ds_garantia_produto FROM tb_produto WHERE cd_produto = " . filter_input(INPUT_GET, 'id'));
-if($result === FALSE) {
-    die(mysql_error()); // TODO: better error handling
-}
-while($row = mysql_fetch_array($result))
-{
-?>
+</td>
                     <td valign="top" bgcolor="#ffffff" class="coluna_centro">
                         <div class="texto_cabecalho_pagina"><h1><?php echo $row["nm_produto"]; ?></h1></div>
 					<form id="detalhe_produto" name="detalhe_produto" method="post" action="http://www.funshopnet.com.br/produto_info.php?action=add_product&id_produto=394" onsubmit="return CheckProductForm(394,this,false);">          <table cellpadding="0" cellspacing="0" border="0" width="100%">
