@@ -1,7 +1,9 @@
 <?php
 session_start();
 require_once '../control/utilidades.class.php';
-require_once '../control/conexao.class.php';
+$con = mysql_connect('localhost', 'root', 'root') or
+    die('Não foi possível conectar: ' . mysql_error());
+mysql_select_db('bd_funshop');
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -794,20 +796,28 @@ $(document).ready(function(){});
   </tr>
 </tbody></table>
 </td></tr></tbody></table>
-</td><?php $sql = mysql_query("SELECT nm_produto FROM tb_produto WHERE cd_produto = " . $_REQUEST['id']); ?>
+</td><?php 
+
+$result = mysql_query("SELECT nm_produto, ds_produto, ds_link_produto, vl_produto, pc_desconto_produto, ds_garantia_produto FROM tb_produto WHERE cd_produto = " . filter_input(INPUT_GET, 'id'));
+if($result === FALSE) {
+    die(mysql_error()); // TODO: better error handling
+}
+while($row = mysql_fetch_array($result))
+{
+?>
                     <td valign="top" bgcolor="#ffffff" class="coluna_centro">
-                        <div class="texto_cabecalho_pagina"><h1><?php echo $sql; ?></h1></div>
+                        <div class="texto_cabecalho_pagina"><h1><?php echo $row["nm_produto"]; ?></h1></div>
 					<form id="detalhe_produto" name="detalhe_produto" method="post" action="http://www.funshopnet.com.br/produto_info.php?action=add_product&id_produto=394" onsubmit="return CheckProductForm(394,this,false);">          <table cellpadding="0" cellspacing="0" border="0" width="100%">
             <tbody><tr>
               <td rowspan="4" valign="top" style="padding-right:20px;" width="30%">
                 <table width="100%" border="0" cellpadding="2" cellspacing="0">
                   <tbody><tr>
                     <td align="center" valign="top">
-                       
+                      
                       <ul id="product_gallery" class="etalage" style="display: block; width: 362px; height: 486px;">
                       <li class="etalage_thumb etalage_thumb_active thumb_1" style="display: list-item; background-image: none;">
-                        <a rel="gallery" href="../img/facebreaker_ps3_1.jpg" title="PS3 FaceBreaker">
-                         <img src="../img/1301930654-250x289-facebreaker_ps3_1.jpg" border="0" title="PS3 FaceBreaker" height="340" tabindex="0" class="etalage_thumb_image" style="display: inline;">                         <img data-width="250" data-height="289" class="etalage_source_image" title="PS3 FaceBreaker" src="../img/facebreaker_ps3_1.jpg">
+                        <a rel="gallery" href="../img/facebreaker_ps3_1.jpg" title="<?php $row["nm_produto"]; ?>">
+                         <img src="../img/1301930654-250x289-facebreaker_ps3_1.jpg" border="0" title="<?php $row["nm_produto"]; ?>" height="340" tabindex="0" class="etalage_thumb_image" style="display: inline;">                         <img data-width="250" data-height="289" class="etalage_source_image" title="PS3 FaceBreaker" src="../img/facebreaker_ps3_1.jpg">
                         </a> 
                       </li>    			
                       </ul>
@@ -860,7 +870,7 @@ $(document).ready(function(){});
 <img src="../img/pixel_trans.gif" border="0" alt="" width="100%" height="10"> 
 </div>                  <div class="produto_preco">
                     <div class="preco">
-                    <div class="preco_promocao">de: <s>R$&nbsp;109,00</s><br><b>por: R$&nbsp;49,00<br><small>(economia de R$&nbsp;60,00)</small></b></div><div><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;2,55</b>  no cartão ou <b>R$&nbsp;46,55</b> à vista com <b>5%</b> desconto</span></div>                    </div>
+                    <div class="preco_promocao">de: <s>R$&nbsp;<?php echo $row["vl_produto"]; ?></s><br><b>por: R$&nbsp;<?php echo $row["vl_produto"] * $row["pc_desconto_produto"]; ?><br><small>(economia de R$&nbsp;<?php echo $row["vl_produto"] - ($row["vl_produto"] * $row["pc_desconto_produto"]); ?>)</small></b></div><div><span class="txt_desconto">em até <b>24x</b> de <b>R$&nbsp;<?php echo number_format(($row["vl_produto"] * 1.25)/24, 2); ?></b>  no cartão ou <b>R$&nbsp;<?php echo number_format(($row["vl_produto"] * $row["pc_desconto_produto"]) * 0.95,2) ?></b> à vista com <b>5%</b> desconto</span></div>                    </div>
                                         </div>
                   
                   
@@ -874,7 +884,7 @@ $(document).ready(function(){});
                                               <li class="botao"><a href="javascript:void(0)" onclick="calcularFrete(394)"><img src="../img/bt_calcularfrete.gif" border="0" alt="" width="116" height="30"></a></li>
                                         </ul>                      
                   <div id="box_forma_pagto" class="tab-container" data-easytabs="true"><ul class="etabs"><li class="tab active"><a href="http://www.funshopnet.com.br/ps3-facebreaker-p394#tabs-boleto" class="active"><img src="../img/option_small_boleto.gif" alt="Boleto"></a></li>
-<li class="tab"><a href="http://www.funshopnet.com.br/ps3-facebreaker-p394#tabs-outros"><img src="../img/option_small_outros.gif" alt="Outros"></a></li></ul><div class="panel-container"><div id="tabs-boleto" class="active" style="display: block;"><ul><li><span class="icon"><img src="../img/bradesco.gif" alt="Boleto Bancário"></span><span class="title">Bradesco</span><span><b>R$&nbsp;46,55</b> à vista com <b>5%</b> de desconto</span></li></ul></div>
+<li class="tab"><a href="http://www.funshopnet.com.br/ps3-facebreaker-p394#tabs-outros"><img src="../img/option_small_outros.gif" alt="Outros"></a></li></ul><div class="panel-container"><div id="tabs-boleto" class="active" style="display: block;"><ul><li><span class="icon"><img src="../img/bradesco.gif" alt="Boleto Bancário"></span><span class="title">Bradesco</span><span><b>R$&nbsp;<?php echo number_format(($row["vl_produto"] * $row["pc_desconto_produto"]) * 0.95,2) ?></b> à vista com <b>5%</b> de desconto</span></li></ul></div>
 <div id="tabs-outros" style="display: none;"><ul><li><span class="icon"><img src="../img/ico_paypal.gif" alt="PayPal"></span><span class="title">PayPal</span><span>R$&nbsp;49,00 à vista</span></li><li><span class="icon"><img src="../img/ico_pagseguro.gif" alt="PagSeguro"></span><span class="title"><font color="green">PagSeguro</font></span><span>em até <b>5x</b> de R$&nbsp;11,02 no cartão*<br>ou <b>R$&nbsp;49,00</b> à vista</span></li><li><span class="icon"><img src="../img/ico_mercadopago.gif" alt="MercadoPago"></span><span class="title"><font color="#013F88">MercadoPago</font></span><span>em até <b>24x</b> de R$&nbsp;2,55 no cartão*<br>ou R$&nbsp;49,00 à vista<br><small>*juros de 24.99% a.m.</small></span></li></ul></div></div></div>  
                 	
               </td>
@@ -944,17 +954,7 @@ A SUA REMOÇÃO PODERÁ CAUSAR ERROS NO MOMENTO DA SUA UTILIZAÇÃO.
       <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:5px; margin-bottom:10px;">
         <tbody><tr>
           <td valign="top" class="texto_aba">
-            Lá se vão duas décadas desde "Mike Tyson's Punch Out" e poucos jogos de boxe depois dele tentaram unir o esporte a elementos cômicos, e menos ainda obtiveram algum sucesso. Com o desejo da EA Sports em inaugurar uma nova linha de títulos casuais, "FaceBreaker" evoca o clássico da década de 80 em bem-humorados duelos nos ringues.<br>
-<br>
-O elenco do jogo conta com 12 lutadores bastante exóticos, como o amante latino Romeo, o gordinho ninja Steve, o xamã Voodoo e o especialista em demolições Molotov. Todos bastante estilizados, graças a um estilo cartunesco que dá o tom de farsa ao jogo, contando ainda com lutas bastante abertas, que admitem golpes que utilizam desde bombas de fumaça a caveiras flamejantes.<br>
-<br>
-Ao contrário da celebrada franquia "Fight Night" da própria EA, os controles de "Facebreaker" não utilizam as alavancas analógicas para golpear, apresentando-se de maneira tradicional, com botões para ataques fortes e fracos. Cada acerto enche uma barra de energia especial, chamada de breaker, que tem vários níveis -- o último e mais poderoso é o finalizador que dá nome ao jogo e deve ser usado caso você não consiga derrubar o oponente três vezes no mesmo round.<br>
-<br>
-Apesar de contar com ataques relativamente simples, há também movimentos de defesa, como bloqueios, aparos e esquivas à disposição, que dão também possibilidade de contra-ataque. Isto garante uma profundidade à mecânica do jogo, garantindo que ele seja tão atraente quanto seus estranhos personagens.<br>
-<br>
-O modo principal de carreira leva o lutador à sua escolha para uma subida nos rankings e ao confronto com quatro campeões mundiais. Além disto, o jogo oferece suporte para partidas multiplayer e um modo de criação de personagens exclusivos, com mais de 60 características de customização e suporte para câmera USB para copiar sua própria foto, com a possibilidade de upload para servidores online no estilo Orkut.<br>
-<br>
-Fonte: UOL Jogos. 
+            <?php echo $row["ds_produto"]; ?>
           </td>
         </tr>
       </tbody></table>
@@ -982,7 +982,7 @@ Fonte: UOL Jogos.
       <table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top:5px; margin-bottom:10px;">
         <tbody><tr>
           <td valign="top" class="texto_aba">
-            90 dias - Contra defeitos de Fabricação. Não Trocamos CDs, DVDs ou Blu-ray riscados. 
+            <?php echo $row["ds_garantia_produto"] ?> 
           </td>
         </tr>
       </tbody></table>
@@ -1010,7 +1010,9 @@ Fonte: UOL Jogos.
 </td>
   </tr>
 </tbody></table>
-	
+<?php
+}
+?>
           					<img src="../img/pixel_trans.gif" border="0" alt="" width="100%" height="10">          <table border="0" align="center" cellpadding="2" cellspacing="5">
             <tbody><tr>
               <td align="right"><img src="../img/icone_duvida.gif" border="0" alt="" width="32" height="32"></td>
@@ -1073,5 +1075,7 @@ Fonte: UOL Jogos.
 </tr>
 </tbody></table>
 
-
+<?php
+mysql_close($con);
+?>
 </body></html>
