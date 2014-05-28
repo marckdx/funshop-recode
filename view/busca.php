@@ -482,7 +482,7 @@ require_once '../control/conexao.class.php';
                 </tr>
             </tbody></table>
         <!-- FIM menu horizontal de categorias //-->
-        <form id="barra_quick_find" name="barra_quick_find" method="POST" action="busca.php">	<table width="100%" border="0" cellspacing="0" cellpadding="0" style="" height="40" background="../img/bg_barra_busca.gif">
+        <form id="barra_quick_find" name="barra_quick_find" method="get" action="busca.php">	<table width="100%" border="0" cellspacing="0" cellpadding="0" style="" height="40" background="../img/bg_barra_busca.gif">
                 <tbody><tr>
                         <td width="99%">
                             <table width="1" border="0" align="right" cellpadding="0" cellspacing="4">
@@ -1011,15 +1011,19 @@ require_once '../control/conexao.class.php';
                                                                 Início do php
                                                             -->
 <?php
-if (!isset($_SESSION['keywords'])) {
+
+if (!isset($_GET['keywords']) || !isset($_SESSION['keywords'])) {
     echo "Não há busca";
-    $_SESSION['keywords'] = $_GET['keywords'];
+   $_SESSION['keywords'] = "hwfsasa";
 } else {
     $con = new conexao();
     
-//    if (!isset($_SESSION['keywords'])) {
-            $_SESSION['keywords'] = $_GET['keywords'];
-//    }
+if ($_SESSION['keywords']=="") {
+            $_SESSION['keywords'] = "awegfqwe";
+   }else{
+       $_SESSION['keywords'] = $_GET['keywords'];
+       
+   }
 
     if (isset($_GET['orderby'])) {
         if ($_GET['orderby'] == "1") {
